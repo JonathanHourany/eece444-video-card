@@ -24,7 +24,7 @@
     `define V_COUNT_MAX     18'd422400
 
     always @( posedge CLK) begin
-        if (NRST == 0) begin
+        if (!NRST) begin
             h_counter <= 9'h000;
 			H_SYNC	  <= 0;
         end
@@ -38,7 +38,7 @@
 				H_SYNC <= 1;
 			end
 			else begin
-				H_SYNC <= 1;
+				H_SYNC <= 0;
 			end
 			
 			if (h_counter > `H_COUNT_MAX) begin
