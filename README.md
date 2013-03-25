@@ -1,7 +1,7 @@
-STM32 Development
+EECE 444 Video Card Project
 =================
 
-This repository provides all the means for setting up the STM32 development environment in linux for the STM32L-Discovery and STM32VL-Discovery boards.
+This repository provides all code from the CSU Chico State EECE 444 class in which a video card is developed in Verilog on a Lattice MachXO CPLD.
 
 
 How to get Started

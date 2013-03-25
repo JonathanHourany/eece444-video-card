@@ -1,0 +1,16 @@
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/mj5g00e/data/mj5gelib.ngl'...
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/mj5g00/data/mj5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'CLK_c' has no load
+WARNING - synthesis: logical net 'RESET_c' has no load
+WARNING - synthesis: logical net 'RX_IN_c' has no load
+WARNING - synthesis: DRC complete with 3 warnings
+
+Design Results:
+      8 blocks expanded
+completed the first expansion

@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "eece444_video_card_eece444_video_card.log"
+-o "eece444_video_card_eece444_video_card.csv"
+-pr "eece444_video_card_eece444_video_card.prf"
