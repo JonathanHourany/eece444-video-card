@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Mar 25 01:33:07 2013
+Wed Mar 27 15:31:54 2013
 
 
 Command Line:  synthesis -f eece444_video_card_eece444_video_card_lattice.synproj 
@@ -49,12 +49,12 @@ INFO: ROM style = auto
 INFO: RAM style = auto
 INFO: -comp option is FALSE
 INFO: -syn option is FALSE
-INFO: -p C:/Users/fox/programming/eece444-video-card (searchpath added)
+INFO: -p C:/Users/OctalByte/Documents/GitHub/eece444-video-card (searchpath added)
 INFO: -p C:/lscc/diamond/2.1_x64/ispfpga/mj5g00/data (searchpath added)
-INFO: -p C:/Users/fox/programming/eece444-video-card/eece444_video_card (searchpath added)
-INFO: -p C:/Users/fox/programming/eece444-video-card (searchpath added)
-INFO: Verilog design file = C:/Users/fox/programming/eece444-video-card/Top.v
-INFO: Verilog design file = C:/Users/fox/programming/eece444-video-card/CtrlLines.v
+INFO: -p C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card (searchpath added)
+INFO: -p C:/Users/OctalByte/Documents/GitHub/eece444-video-card (searchpath added)
+INFO: Verilog design file = C:/Users/OctalByte/Documents/GitHub/eece444-video-card/CtrlLines.v
+INFO: Verilog design file = C:/Users/OctalByte/Documents/GitHub/eece444-video-card/Top.v
 INFO: Ngd file = eece444_video_card_eece444_video_card.ngd
 INFO: -sdc option: sdc file input not used
 INFO: -lpf option: output file option is OFF
@@ -63,15 +63,15 @@ INFO: -r option is OFF [ Remove LOC Properties is OFF ]
 INFO: The default vhdl library search path is now "C:/lscc/diamond/2.1_x64/cae_library/vhdl_packages/vdbs" (VHDL-1504)
 INFO: * compile design *
 INFO: Compile Design Begin
-c:/users/fox/programming/eece444-video-card/top.v(9): INFO: compiling module Top (VERI-1018)
+c:/users/octalbyte/documents/github/eece444-video-card/top.v(9): INFO: compiling module Top (VERI-1018)
 C:/lscc/diamond/2.1_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo.v(1372): INFO: compiling module OSCC (VERI-1018)
-c:/users/fox/programming/eece444-video-card/ctrllines.v(9): INFO: compiling module CtrlLines (VERI-1018)
+c:/users/octalbyte/documents/github/eece444-video-card/ctrllines.v(9): INFO: compiling module CtrlLines (VERI-1018)
 INFO: Top level module name = Top
+INFO: ######## Missing driver on net : reset, patching with GND... (LSE-1017)
 
 
-c:/users/fox/programming/eece444-video-card/ctrllines.v(51): WARNING: Bit 0 of Register \CONTROLLINES/h_counter is stuck at Zero (VDB-5010)
-c:/users/fox/programming/eece444-video-card/ctrllines.v(51): WARNING: Register \CONTROLLINES/H_SYNC_28 is stuck at Zero (VDB-5013)
-INFO: GSR Instance connected to net: RESET_c (LSE-1149)
+INFO: GSR Instance connected to net: \CONTROLLINES/n1 (LSE-1149)
+INFO: GSR will not be inferred since no asynchronous signal was found in netlist (LSE-1148)
 WARNING: No lpf file will be written because -lpf option is not used or set to 0
 INFO: Applying 200.000000 MHz constraint to all clocks (LSE-5000)
 INFO: Results of ngd drc checks are available in Top_drc.log
@@ -79,13 +79,13 @@ INFO: All blocks are expanded and NGD expansion is successful
 INFO: Writing ngd file eece444_video_card_eece444_video_card.ngd
 
 ################### Begin Area Report (Top)######################
-Number of register bits => 20 of 2280 (0 % )
-CCU2 => 10
-FD1P3AX => 1
-FD1S3AX => 19
+Number of register bits => 32 of 2280 (1 % )
+CCU2 => 16
+FD1S3AX => 2
+FD1S3IX => 30
 GSR => 1
 IB => 1
-OB => 3
+OB => 4
 ORCALUT4 => 14
 OSCC => 1
 ################### End Area Report ##################
@@ -97,21 +97,21 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk, loads : 20
+  Net : osc_clk_c, loads : 32
 Clock Enable Nets
-Number of Clock Enables: 1
+Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : v_counter_10, loads : 4
-  Net : v_counter_9, loads : 4
+  Net : n51, loads : 19
+  Net : n9, loads : 11
+  Net : v_counter_18, loads : 3
+  Net : v_counter_9, loads : 3
+  Net : v_counter_16, loads : 3
+  Net : v_counter_17, loads : 3
+  Net : v_counter_14, loads : 3
+  Net : v_counter_15, loads : 3
   Net : v_counter_12, loads : 3
   Net : v_counter_13, loads : 3
-  Net : v_counter_14, loads : 3
-  Net : v_counter_6, loads : 3
-  Net : v_counter_18, loads : 3
-  Net : v_counter_17, loads : 3
-  Net : v_counter_11, loads : 3
-  Net : RESET_c, loads : 2
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -121,7 +121,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk]                     |  200.000 MHz|  158.203 MHz|     5 *
+clk0 [get_nets osc_clk_c]               |  200.000 MHz|  174.186 MHz|     5 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -129,8 +129,8 @@ clk0 [get_nets clk]                     |  200.000 MHz|  158.203 MHz|     5 *
 1 constraints not met.
 
 
-Peak Memory Usage: 55.340  MB
+Peak Memory Usage: 55.020  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.281  secs
+Elapsed CPU time for LSE flow : 1.813  secs
 --------------------------------------------------------------

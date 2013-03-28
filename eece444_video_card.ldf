@@ -7,9 +7,15 @@
             <Options/>
         </Source>
         <Source name="Top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="Top"/>
+        </Source>
+        <Source name="Usart.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
         <Source name="eece444_video_card.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="eece444_video_card/eece444_video_card.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
     </Implementation>

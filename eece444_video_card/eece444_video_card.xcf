@@ -19,15 +19,20 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/Users/fox/programming/eece444-video-card/eece444_video_card/eece444_video_card_eece444_video_card.jed</File>
+			<File>C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card/eece444_video_card_eece444_video_card.jed</File>
+			<FileTime>03/26/13 14:23:30</FileTime>
+			<JedecChecksum>0x3BF7</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
 				<IOState>HighZ</IOState>
+				<PreloadLength>544</PreloadLength>
 				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
 				<OverideUES value="TRUE"/>
 				<TCKFrequency>1.000000 MHz</TCKFrequency>
 				<SVFProcessor>ispVM</SVFProcessor>
+				<Usercode>0x00000000</Usercode>
+				<AccessMode>FLASH</AccessMode>
 			</Option>
 		</Device>
 	</Chain>
@@ -42,7 +47,6 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
-		<USBID>Lattice FTUSB Interface Cable A Location 0000 Serial A</USBID>
 		<JTAGPinSetting>
 			TRST	ABSENT;
 			ISPEN	ABSENT;
