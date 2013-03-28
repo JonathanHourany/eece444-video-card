@@ -1,28 +1,27 @@
 ----------------------------------------------------------------------
 Report for cell Top.<NoName>
-Register bits:  32 of 2280 (1.404%)
-I/O cells:      5
+Register bits:  11 of 2280 (0.482%)
+I/O cells:      4
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        16          100.0
-                            FD1S3AX         2          100.0
-                            FD1S3IX        30          100.0
+                               CCU2         6          100.0
+                            FD1S3IX        11          100.0
                                 GSR         1          100.0
                                  IB         1          100.0
-                                 OB         4          100.0
-                           ORCALUT4        14          100.0
+                                 OB         2          100.0
+                                OBZ         1          100.0
+                           ORCALUT4         7          100.0
                                OSCC         1          100.0
                         VERIFIC_PWR         1          100.0
 SUB MODULES
-                          CtrlLines         1
-                              TOTAL        71
+                         Controller         1
+                              TOTAL        32
 ----------------------------------------------------------------------
-Report for cell CtrlLines.v1
-Instance Path : CONTROLLINES
+Report for cell Controller.v1
+Instance Path : CNTRL
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        16          100.0
-                            FD1S3AX         2          100.0
-                            FD1S3IX        30          100.0
-                           ORCALUT4        14          100.0
-                              TOTAL        62
+                               CCU2         6          100.0
+                            FD1S3IX        11          100.0
+                           ORCALUT4         4           57.1
+                              TOTAL        21

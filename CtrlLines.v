@@ -16,7 +16,7 @@
 	wire NRST;
 	reg  H_SYNC;
 	reg  V_SYNC;
-    reg [10:0]  h_counter;   /*< Tracks amount of pulses from CLK    >*/
+    reg [10:0] h_counter;   /*< Tracks amount of pulses from CLK    >*/
     reg [18:0] v_counter;    /*< Tracks amount of pulses from H_SYNC >*/
 
     `define H_BACK_PORCH	11'd95
@@ -27,12 +27,12 @@
     `define V_FRONT_PORCH   19'd422400
     `define V_COUNT_MAX     19'd422400
 
-    always @(posedge NRST, posedge CLK) begin
-        if (NRST) begin
+    always @(posedge CLK) begin
+        //if (NRST) begin
             //h_counter <= 11'd00;
-			H_SYNC	  <= 0;
-        end
-        else begin
+			//H_SYNC	  <= 0;
+        //end
+        //else begin
             if (h_counter < `H_BACK_PORCH) begin
 				H_SYNC <= 0;
 			end
@@ -42,29 +42,29 @@
 			else begin
 				H_SYNC <= H_SYNC;
 			end
-        end
+        //end
     end
 	
-	always@ (posedge NRST, posedge CLK) begin
-		if (NRST) begin
-			h_counter <= 11'd00;
-		end
-		else begin
+	always@ (posedge CLK) begin
+		//if (NRST) begin
+			//h_counter <= 11'd00;
+		//end
+		//else begin
 			if (h_counter >= `H_COUNT_MAX) begin
 				h_counter 	<= 11'd00;
 			end
 			else begin
 				h_counter 	<= h_counter + 1;
 			end
-		end
+		//end
 	end
 	
     always @(posedge CLK) begin
-        if (NRST) begin
-            v_counter <= 9'd00;
-			V_SYNC	  <= 0;
-        end
-        else begin
+        //if (NRST) begin
+            //v_counter <= 9'd00;
+			//V_SYNC	  <= 0;
+        //end
+        //else begin
             if (v_counter < `V_BACK_PORCH) begin
 				V_SYNC <= 0;
 			end
@@ -81,7 +81,7 @@
 			else begin
 				v_counter 	<= v_counter + 1;
 			end
-        end
+        //end
     end
 endmodule
 

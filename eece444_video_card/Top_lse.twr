@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Mar 27 15:31:56 2013
+Wed Mar 27 22:59:12 2013
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,105 +18,95 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets osc_clk_c]
-            338 items scored, 59 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets osc_clk]
+            87 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 0.741ns
+Passed:  The following path meets requirements by 0.607ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \CONTROLLINES/h_counter_13__i0  (from OSCC_1 +)
-   Destination:    FD1S3AX    D              \CONTROLLINES/H_SYNC_24  (to OSCC_1 +)
+   Source:         FD1S3IX    CK             \CNTRL/h_counter_8__i9  (from OSCC_1 +)
+   Destination:    FD1S3IX    CD             \CNTRL/h_counter_8__i10  (to OSCC_1 +)
 
-   Delay:                   5.559ns  (39.1% logic, 60.9% route), 5 logic levels.
+   Delay:                   4.211ns  (33.1% logic, 66.9% route), 3 logic levels.
 
  Constraint Details:
 
-      5.559ns data_path \CONTROLLINES/h_counter_13__i0 to \CONTROLLINES/H_SYNC_24 violates
+      4.211ns data_path \CNTRL/h_counter_8__i9 to \CNTRL/h_counter_8__i10 meets
       5.000ns delay constraint less
-      0.182ns L_S requirement (totaling 4.818ns) by 0.741ns
+      0.182ns L_S requirement (totaling 4.818ns) by 0.607ns
 
- Path Details: \CONTROLLINES/h_counter_13__i0 to \CONTROLLINES/H_SYNC_24
+ Path Details: \CNTRL/h_counter_8__i9 to \CNTRL/h_counter_8__i10
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.613             CK to Q              \CONTROLLINES/h_counter_13__i0 (from OSCC_1)
-Route         2   e 0.906                                  \CONTROLLINES/h_counter[0]
-LUT4        ---     0.390              A to Z              \CONTROLLINES/i1_2_lut
-Route         1   e 0.620                                  \CONTROLLINES/n6
-LUT4        ---     0.390              D to Z              \CONTROLLINES/i4_4_lut
-Route         1   e 0.620                                  \CONTROLLINES/n157
-LUT4        ---     0.390              A to Z              \CONTROLLINES/i1_4_lut_adj_2
-Route         1   e 0.620                                  \CONTROLLINES/n6_adj_2
-LUT4        ---     0.390              D to Z              \CONTROLLINES/i4_4_lut_adj_3
-Route         1   e 0.620                                  \CONTROLLINES/n162
+L_CO        ---     0.613             CK to Q              \CNTRL/h_counter_8__i9 (from OSCC_1)
+Route         3   e 1.003                                  h_counter[9]
+LUT4        ---     0.390              B to Z              i1_2_lut
+Route         1   e 0.620                                  n4
+LUT4        ---     0.390              D to Z              i1_4_lut
+Route        11   e 1.195                                  n8
                   --------
-                    5.559  (39.1% logic, 60.9% route), 5 logic levels.
+                    4.211  (33.1% logic, 66.9% route), 3 logic levels.
 
 
-Error:  The following path violates requirements by 0.741ns
+Passed:  The following path meets requirements by 0.607ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \CONTROLLINES/h_counter_13__i1  (from OSCC_1 +)
-   Destination:    FD1S3AX    D              \CONTROLLINES/H_SYNC_24  (to OSCC_1 +)
+   Source:         FD1S3IX    CK             \CNTRL/h_counter_8__i9  (from OSCC_1 +)
+   Destination:    FD1S3IX    CD             \CNTRL/h_counter_8__i0  (to OSCC_1 +)
 
-   Delay:                   5.559ns  (39.1% logic, 60.9% route), 5 logic levels.
+   Delay:                   4.211ns  (33.1% logic, 66.9% route), 3 logic levels.
 
  Constraint Details:
 
-      5.559ns data_path \CONTROLLINES/h_counter_13__i1 to \CONTROLLINES/H_SYNC_24 violates
+      4.211ns data_path \CNTRL/h_counter_8__i9 to \CNTRL/h_counter_8__i0 meets
       5.000ns delay constraint less
-      0.182ns L_S requirement (totaling 4.818ns) by 0.741ns
+      0.182ns L_S requirement (totaling 4.818ns) by 0.607ns
 
- Path Details: \CONTROLLINES/h_counter_13__i1 to \CONTROLLINES/H_SYNC_24
+ Path Details: \CNTRL/h_counter_8__i9 to \CNTRL/h_counter_8__i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.613             CK to Q              \CONTROLLINES/h_counter_13__i1 (from OSCC_1)
-Route         2   e 0.906                                  \CONTROLLINES/h_counter[1]
-LUT4        ---     0.390              B to Z              \CONTROLLINES/i1_2_lut
-Route         1   e 0.620                                  \CONTROLLINES/n6
-LUT4        ---     0.390              D to Z              \CONTROLLINES/i4_4_lut
-Route         1   e 0.620                                  \CONTROLLINES/n157
-LUT4        ---     0.390              A to Z              \CONTROLLINES/i1_4_lut_adj_2
-Route         1   e 0.620                                  \CONTROLLINES/n6_adj_2
-LUT4        ---     0.390              D to Z              \CONTROLLINES/i4_4_lut_adj_3
-Route         1   e 0.620                                  \CONTROLLINES/n162
+L_CO        ---     0.613             CK to Q              \CNTRL/h_counter_8__i9 (from OSCC_1)
+Route         3   e 1.003                                  h_counter[9]
+LUT4        ---     0.390              B to Z              i1_2_lut
+Route         1   e 0.620                                  n4
+LUT4        ---     0.390              D to Z              i1_4_lut
+Route        11   e 1.195                                  n8
                   --------
-                    5.559  (39.1% logic, 60.9% route), 5 logic levels.
+                    4.211  (33.1% logic, 66.9% route), 3 logic levels.
 
 
-Error:  The following path violates requirements by 0.534ns
+Passed:  The following path meets requirements by 0.607ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \CONTROLLINES/v_counter_14__i11  (from OSCC_1 +)
-   Destination:    FD1S3IX    CD             \CONTROLLINES/v_counter_14__i0  (to OSCC_1 +)
+   Source:         FD1S3IX    CK             \CNTRL/h_counter_8__i9  (from OSCC_1 +)
+   Destination:    FD1S3IX    CD             \CNTRL/h_counter_8__i9  (to OSCC_1 +)
 
-   Delay:                   5.352ns  (33.3% logic, 66.7% route), 4 logic levels.
+   Delay:                   4.211ns  (33.1% logic, 66.9% route), 3 logic levels.
 
  Constraint Details:
 
-      5.352ns data_path \CONTROLLINES/v_counter_14__i11 to \CONTROLLINES/v_counter_14__i0 violates
+      4.211ns data_path \CNTRL/h_counter_8__i9 to \CNTRL/h_counter_8__i9 meets
       5.000ns delay constraint less
-      0.182ns L_S requirement (totaling 4.818ns) by 0.534ns
+      0.182ns L_S requirement (totaling 4.818ns) by 0.607ns
 
- Path Details: \CONTROLLINES/v_counter_14__i11 to \CONTROLLINES/v_counter_14__i0
+ Path Details: \CNTRL/h_counter_8__i9 to \CNTRL/h_counter_8__i9
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.613             CK to Q              \CONTROLLINES/v_counter_14__i11 (from OSCC_1)
-Route         3   e 1.003                                  \CONTROLLINES/v_counter[11]
-LUT4        ---     0.390              A to Z              \CONTROLLINES/i2_3_lut_adj_4
-Route         1   e 0.620                                  \CONTROLLINES/n160
-LUT4        ---     0.390              A to Z              \CONTROLLINES/i3_4_lut
-Route         1   e 0.620                                  \CONTROLLINES/n154
-LUT4        ---     0.390              C to Z              \CONTROLLINES/i2_4_lut
-Route        19   e 1.326                                  \CONTROLLINES/n51
+L_CO        ---     0.613             CK to Q              \CNTRL/h_counter_8__i9 (from OSCC_1)
+Route         3   e 1.003                                  h_counter[9]
+LUT4        ---     0.390              B to Z              i1_2_lut
+Route         1   e 0.620                                  n4
+LUT4        ---     0.390              D to Z              i1_4_lut
+Route        11   e 1.195                                  n8
                   --------
-                    5.352  (33.3% logic, 66.7% route), 4 logic levels.
+                    4.211  (33.1% logic, 66.9% route), 3 logic levels.
 
-Warning: 5.741 ns is the maximum delay for this constraint.
+Report: 4.393 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -126,38 +116,22 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets osc_clk_c]               |     5.000 ns|     5.741 ns|     5 *
+clk0 [get_nets osc_clk]                 |     5.000 ns|     4.393 ns|     3  
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+All constraints were met.
 
---------------------------------------------------------------------------------
-Critical Nets                           |   Loads|  Errors| % of total
---------------------------------------------------------------------------------
-\CONTROLLINES/n51                       |      19|      57|     96.61%
-                                        |        |        |
-\CONTROLLINES/n154                      |       1|      57|     96.61%
-                                        |        |        |
-\CONTROLLINES/n160                      |       1|      57|     96.61%
-                                        |        |        |
-\CONTROLLINES/v_counter[9]              |       3|      19|     32.20%
-                                        |        |        |
-\CONTROLLINES/v_counter[10]             |       3|      19|     32.20%
-                                        |        |        |
-\CONTROLLINES/v_counter[11]             |       3|      19|     32.20%
-                                        |        |        |
---------------------------------------------------------------------------------
 
 
 Timing summary:
 ---------------
 
-Timing errors: 59  Score: 31920
+Timing errors: 0  Score: 0
 
-Constraints cover  338 paths, 75 nets, and 174 connections (98.3% coverage)
+Constraints cover  87 paths, 26 nets, and 52 connections (76.5% coverage)
 
 
-Peak memory: 57516032 bytes, TRCE: 1851392 bytes, DLYMAN: 0 bytes
+Peak memory: 56803328 bytes, TRCE: 1425408 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

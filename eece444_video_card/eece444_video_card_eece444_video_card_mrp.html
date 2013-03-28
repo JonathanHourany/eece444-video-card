@@ -15,27 +15,27 @@ Command line:   map -a MachXO -p LCMXO2280C -t FTBGA256 -s 3 -oc Commercial
      eece444_video_card_eece444_video_card.ngd -o
      eece444_video_card_eece444_video_card_map.ncd -pr
      eece444_video_card_eece444_video_card.prf -mp
-     eece444_video_card_eece444_video_card.mrp C:/Users/OctalByte/Documents/GitH
-     ub/eece444-video-card/eece444_video_card.lpf -c 0
+     eece444_video_card_eece444_video_card.mrp
+     C:/Users/fox/programming/eece444-video-card/eece444_video_card.lpf -c 0
 Target Vendor:  LATTICE
 Target Device:  LCMXO2280CFTBGA256
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 2.1.0.103
-Mapped on:  03/27/13  15:20:27
+Mapped on:  03/27/13  22:59:19
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of PFU registers:    32
-   Number of SLICEs:            24 out of  1140 (2%)
-      SLICEs(logic/ROM):        24 out of   900 (3%)
+   Number of PFU registers:    11
+   Number of SLICEs:            10 out of  1140 (1%)
+      SLICEs(logic/ROM):        10 out of   900 (1%)
       SLICEs(logic/ROM/RAM):     0 out of   240 (0%)
           As RAM:            0
           As Logic/ROM:      0
-   Number of logic LUT4s:      15
+   Number of logic LUT4s:       8
    Number of distributed RAM:   0 (0 LUT4s)
-   Number of ripple logic:     16 (32 LUT4s)
+   Number of ripple logic:      6 (12 LUT4s)
    Number of shift registers:   0
-   Total number of LUT4s:      47
+   Total number of LUT4s:      20
    Number of external PIOs: 4 out of 211 (2%)
    Number of PLLs:  0 out of 2 (0%)
    Number of block RAMs:  0 out of 3 (0%)
@@ -51,24 +51,23 @@ Mapped on:  03/27/13  15:20:27
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  1
-     Net osc_clk_c: 18 loads, 18 rising, 0 falling (Driver: OSCC_1 )
+     Net osc_clk: 6 loads, 6 rising, 0 falling (Driver: OSCC_1 )
    Number of Clock Enables:  0
-   Number of LSRs:  2
-     Net CONTROLLINES/n64: 10 loads, 10 LSLICEs
-     Net CONTROLLINES/n10: 6 loads, 6 LSLICEs
+   Number of LSRs:  1
+     Net n8: 6 loads, 6 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net CONTROLLINES/n64: 10 loads
-     Net CONTROLLINES/n10: 6 loads
-     Net CONTROLLINES/v_counter_10: 3 loads
-     Net CONTROLLINES/v_counter_11: 3 loads
-     Net CONTROLLINES/v_counter_12: 3 loads
-     Net CONTROLLINES/v_counter_13: 3 loads
-     Net CONTROLLINES/v_counter_14: 3 loads
+     Net n8: 6 loads
+     Net h_counter_10: 3 loads
+     Net h_counter_5: 3 loads
+     Net h_counter_6: 3 loads
+     Net h_counter_7: 3 loads
+     Net h_counter_8: 3 loads
+     Net h_counter_9: 3 loads
+     Net CNTRL/h_counter_0: 2 loads
 
-     Net CONTROLLINES/v_counter_16: 3 loads
-     Net CONTROLLINES/v_counter_17: 3 loads
-     Net CONTROLLINES/v_counter_18: 3 loads
+     Net CNTRL/h_counter_1: 2 loads
+     Net CNTRL/h_counter_4: 2 loads
 
 
 
@@ -93,11 +92,11 @@ Mapped on:  03/27/13  15:20:27
 +---------------------+-----------+-----------+------------+------------+
 | V_SYNC              | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| RED                 | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
 | H_SYNC              | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| osc_clk             | OUTPUT    | LVCMOS33  |            |            |
+| RED                 | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RESET               | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 
 
@@ -105,52 +104,28 @@ Mapped on:  03/27/13  15:20:27
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block GSR_INST undriven or does not drive anything - clipped.
-Block RESET_pad undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
-Signal RESET_c undriven or does not drive anything - clipped.
-Signal RESET undriven or does not drive anything - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_2/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_4/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_6/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_8/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_10/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_12/S1 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_12/CO1 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/h_counter_13_add_4_12/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_2/CO0 undriven or does not drive anything
-
-     - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_4/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_6/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_8/CO0 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_10/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_12/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_14/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_16/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_18/CO0 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_20/S1 undriven or does not drive anything
-     - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_20/CO1 undriven or does not drive
-     anything - clipped.
-Signal CONTROLLINES/v_counter_14_add_4_20/CO0 undriven or does not drive
-     anything - clipped.
+Signal CNTRL/h_counter_8_add_4_12/S1 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_12/CO1 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_12/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_4/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_6/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_8/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_10/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_8_add_4_2/CO0 undriven or does not drive anything -
+     clipped.
 Block i1 was optimized away.
+
+
+
+
 
 OSC Summary
 -----------
@@ -158,7 +133,7 @@ OSC Summary
 OSC 1:                                     Pin/Node Value
   OSC Instance Name:                                OSCC_1
   OSC Type:                                         OSCC
-  OSC Output:                              PIN,NODE osc_clk_c
+  OSC Output:                              NODE     osc_clk
 
 
 
@@ -174,8 +149,35 @@ Instance Name: OSCC_1
 -------------------------
 
    Total CPU Time: 0 secs
-   Total REAL Time: 2 secs
-   Peak Memory Usage: 32 MB
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 33 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

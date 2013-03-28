@@ -14,7 +14,7 @@ Performance Grade:      3
 PACKAGE:          FTBGA256
 Package Status:                     Final          Version 1.26
 
-Wed Mar 27 15:20:47 2013
+Wed Mar 27 22:59:21 2013
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------+
@@ -22,15 +22,14 @@ Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------+
 | H_SYNC    | E4/7     | LVCMOS33_OUT | PL2A  | DRIVE:8mA SLEW:FAST PULL:UP  |
 | RED       | E5/7     | LVCMOS33_OUT | PL2B  | DRIVE:8mA SLEW:FAST PULL:UP  |
+| RESET     | G2/7     | LVCMOS33_IN  | PL7B  | SLEW:FAST PULL:UP            |
 | V_SYNC    | H2/6     | LVCMOS33_OUT | PL11A | DRIVE:8mA SLEW:FAST PULL:UP  |
-| osc_clk   | T12/4    | LVCMOS33_OUT | PB14B | DRIVE:8mA SLEW:FAST PULL:UP  |
 +-----------+----------+--------------+-------+------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 4    | 3.3V  |
 | 6    | 3.3V  |
 | 7    | 3.3V  |
 +------+-------+
@@ -135,7 +134,7 @@ Vccio by Bank:
 | F15/2    |     unused, PULL:UP |            |              | PR7B  |                |
 | F16/2    |     unused, PULL:UP |            |              | PR7C  |                |
 | G1/7     |     unused, PULL:UP |            |              | PL10C |                |
-| G2/7     |     unused, PULL:UP |            |              | PL7B  | GSR_PADN       |
+| G2/7     | RESET               | LOCATED    | LVCMOS33_IN  | PL7B  | GSR_PADN       |
 | G3/7     |     unused, PULL:UP |            |              | PL8C  |                |
 | G4/7     |     unused, PULL:UP |            |              | PL8A  |                |
 | G5/7     |     unused, PULL:UP |            |              | PL8B  |                |
@@ -314,7 +313,7 @@ Vccio by Bank:
 | T8/5     |     unused, PULL:UP |            |              | PB6A  |                |
 | T10/4    |     unused, PULL:UP |            |              | PB12A |                |
 | T11/4    |     unused, PULL:UP |            |              | PB12B |                |
-| T12/4    | osc_clk             |            | LVCMOS33_OUT | PB14B |                |
+| T12/4    |     unused, PULL:UP |            |              | PB14B |                |
 | T13/4    |     unused, PULL:UP |            |              | PB14A |                |
 | T14/4    |     unused, PULL:UP |            |              | PB15A |                |
 | T15/4    |     unused, PULL:UP |            |              | PB15B |                |
@@ -329,8 +328,8 @@ Locate Preferences for each Pin:
 
 LOCATE  COMP  "H_SYNC"  SITE  "E4";
 LOCATE  COMP  "RED"  SITE  "E5";
+LOCATE  COMP  "RESET"  SITE  "G2";
 LOCATE  COMP  "V_SYNC"  SITE  "H2";
-LOCATE  COMP  "osc_clk"  SITE  "T12";
 
 
 
@@ -342,7 +341,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Mar 27 15:20:47 2013
+Wed Mar 27 22:59:21 2013
 
 
 
