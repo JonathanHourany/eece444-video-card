@@ -32,12 +32,30 @@
 		end
 	end
 	
+	always @(*) begin
+		if (v_counter < `V_BACK_PORCH) begin
+			V_SYNC = 0;
+		end
+		else begin
+			V_SYNC = 1;
+		end
+	end
+	
 	always @(posedge CLK) begin
 		if (h_counter >= `H_COUNT_MAX || !NRST) begin
 			h_counter <= 11'b00;
 		end
 		else begin
 			h_counter <= h_counter + 1;
+		end
+	end
+	
+	always @(posedge CLK) begin
+		if (v_counter >= `V_COUNT_MAX || !NRST) begin
+			v_counter <= 11'b00;
+		end
+		else begin
+			v_counter <= v_counter + 1;
 		end
 	end
 

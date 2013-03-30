@@ -29,17 +29,17 @@ module Top(RESET, H_SYNC, V_SYNC, RED);
        //end 
      //end
 	 
-	 reg osc_clk, reset;
-	 initial begin
-		 #0 reset 	= 0;
-		 #1 osc_clk 	= 0;
-		 #1 reset 	= 1;
-	 end
+	 //reg osc_clk, reset;
+	 //initial begin
+		 //#1 reset 	= 0;
+		 //#1 osc_clk 	= 0;
+		 //#1 reset 	= 1;
+	 //end
 	 
-	 always #1 osc_clk = ~osc_clk;
+	 //always #1 osc_clk = ~osc_clk;
 	 
-	//OSCC OSCC_1 (.OSC(osc_clk));
-	Controller CNTRL(.NRST(reset), .CLK(osc_clk), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC));
+	OSCC OSCC_1 (.OSC(osc_clk));
+	Controller CNTRL(.NRST(RESET), .CLK(osc_clk), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC));
 	//CtrlLines CONTROLLINES(.NRST(RESET), .CLK(osc_clk), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC));
 	
 	assign RED = 1; 

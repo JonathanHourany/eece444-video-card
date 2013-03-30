@@ -7,28 +7,28 @@ Command line:   map -a MachXO -p LCMXO2280C -t FTBGA256 -s 3 -oc Commercial
      eece444_video_card_eece444_video_card.ngd -o
      eece444_video_card_eece444_video_card_map.ncd -pr
      eece444_video_card_eece444_video_card.prf -mp
-     eece444_video_card_eece444_video_card.mrp
-     C:/Users/fox/programming/eece444-video-card/eece444_video_card.lpf -c 0
+     eece444_video_card_eece444_video_card.mrp C:/Users/OctalByte/Documents/GitH
+     ub/eece444-video-card/eece444_video_card.lpf -c 0
 Target Vendor:  LATTICE
 Target Device:  LCMXO2280CFTBGA256
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 2.1.0.103
-Mapped on:  03/27/13  22:59:19
+Mapped on:  03/28/13  16:33:23
 
 Design Summary
 --------------
 
-   Number of PFU registers:    11
-   Number of SLICEs:            10 out of  1140 (1%)
-      SLICEs(logic/ROM):        10 out of   900 (1%)
+   Number of PFU registers:    30
+   Number of SLICEs:            24 out of  1140 (2%)
+      SLICEs(logic/ROM):        24 out of   900 (3%)
       SLICEs(logic/ROM/RAM):     0 out of   240 (0%)
           As RAM:            0
           As Logic/ROM:      0
-   Number of logic LUT4s:       8
+   Number of logic LUT4s:      15
    Number of distributed RAM:   0 (0 LUT4s)
-   Number of ripple logic:      6 (12 LUT4s)
+   Number of ripple logic:     16 (32 LUT4s)
    Number of shift registers:   0
-   Total number of LUT4s:      20
+   Total number of LUT4s:      47
    Number of external PIOs: 4 out of 211 (2%)
    Number of PLLs:  0 out of 2 (0%)
    Number of block RAMs:  0 out of 3 (0%)
@@ -44,32 +44,33 @@ Design Summary
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  1
-     Net osc_clk: 6 loads, 6 rising, 0 falling (Driver: OSCC_1 )
+     Net osc_clk: 16 loads, 16 rising, 0 falling (Driver: OSCC_1 )
    Number of Clock Enables:  0
-   Number of LSRs:  1
-     Net n8: 6 loads, 6 LSLICEs
+   Number of LSRs:  2
+     Net CNTRL/n10: 6 loads, 6 LSLICEs
+     Net CNTRL/n1: 10 loads, 10 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n8: 6 loads
-     Net h_counter_10: 3 loads
-     Net h_counter_5: 3 loads
-     Net h_counter_6: 3 loads
-     Net h_counter_7: 3 loads
-     Net h_counter_8: 3 loads
-     Net h_counter_9: 3 loads
-     Net CNTRL/h_counter_0: 2 loads
+     Net CNTRL/n1: 10 loads
+     Net CNTRL/n10: 6 loads
+     Net CNTRL/h_counter_6: 3 loads
+     Net CNTRL/h_counter_7: 3 loads
+     Net CNTRL/v_counter_10: 3 loads
+     Net CNTRL/v_counter_11: 3 loads
+     Net CNTRL/v_counter_12: 3 loads
 
                                     Page 1
 
 
 
 
-Design:  Top                                           Date:  03/27/13  22:59:19
+Design:  Top                                           Date:  03/28/13  16:33:23
 
 Design Summary (cont)
 ---------------------
-     Net CNTRL/h_counter_1: 2 loads
-     Net CNTRL/h_counter_4: 2 loads
+     Net CNTRL/v_counter_13: 3 loads
+     Net CNTRL/v_counter_14: 3 loads
+     Net CNTRL/v_counter_18: 3 loads
 
 
 
@@ -91,9 +92,9 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+------------+
 | V_SYNC              | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| H_SYNC              | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
 | RED                 | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| H_SYNC              | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | RESET               | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
@@ -103,34 +104,57 @@ Removed logic
 
 Block GSR_INST undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
-Signal CNTRL/h_counter_8_add_4_12/S1 undriven or does not drive anything -
+Signal CNTRL/h_counter_9_add_4_10/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_12/CO1 undriven or does not drive anything -
+Signal CNTRL/v_counter_10_add_4_16/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_12/CO0 undriven or does not drive anything -
+Signal CNTRL/h_counter_9_add_4_12/S1 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_4/CO0 undriven or does not drive anything -
+Signal CNTRL/h_counter_9_add_4_12/CO1 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_6/CO0 undriven or does not drive anything -
+Signal CNTRL/h_counter_9_add_4_12/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_8/CO0 undriven or does not drive anything -
+Signal CNTRL/v_counter_10_add_4_2/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_10/CO0 undriven or does not drive anything -
+Signal CNTRL/v_counter_10_add_4_6/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_8_add_4_2/CO0 undriven or does not drive anything -
+Signal CNTRL/h_counter_9_add_4_4/CO0 undriven or does not drive anything -
      clipped.
-Block i1 was optimized away.
-
-
-
-
+Signal CNTRL/h_counter_9_add_4_6/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_18/CO0 undriven or does not drive anything -
+     clipped.
 
                                     Page 2
 
 
 
 
-Design:  Top                                           Date:  03/27/13  22:59:19
+Design:  Top                                           Date:  03/28/13  16:33:23
+
+Removed logic (cont)
+--------------------
+Signal CNTRL/v_counter_10_add_4_4/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_8/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_9_add_4_8/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_9_add_4_2/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_20/S1 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_20/CO1 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_20/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_10/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_12/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_10_add_4_14/CO0 undriven or does not drive anything -
+     clipped.
+Block i1 was optimized away.
 
 OSC Summary
 -----------
@@ -151,31 +175,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 33 MB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Peak Memory Usage: 32 MB
 
 
 

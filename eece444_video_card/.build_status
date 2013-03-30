@@ -5,37 +5,37 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1364450363"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1364513641"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1364450359">
-            <Task name="Map" build_result="2" update_result="0" update_time="1364450359"/>
+        <Milestone name="Map" build_result="2" build_time="1364513604">
+            <Task name="Map" build_result="2" update_result="0" update_time="1364513604"/>
             <Task name="MapEqu" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
-            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1364450360"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1364513607"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1364450362">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1364450362"/>
+        <Milestone name="PAR" build_result="2" build_time="1364513637">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1364513637"/>
             <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1364450352">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1364450352"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1364450352"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1364513603">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1364513603"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1364513641"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="0" update_result="2" update_time="1364448193"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1364513597"/>
             <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
             <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Report name="eece444_video_card_eece444_video_card.bgn" last_build_time="1364450362" last_build_size="1953"/>
-        <Report name="eece444_video_card_eece444_video_card.jed" last_build_time="1364450363" last_build_size="500613"/>
-        <Report name="eece444_video_card_eece444_video_card.lsedata" last_build_time="1364450352" last_build_size="17049"/>
-        <Report name="eece444_video_card_eece444_video_card.ncd" last_build_time="1364450362" last_build_size="14089"/>
-        <Report name="eece444_video_card_eece444_video_card.ngd" last_build_time="1364450352" last_build_size="19134"/>
-        <Report name="eece444_video_card_eece444_video_card_map.ncd" last_build_time="1364450359" last_build_size="10389"/>
-        <Report name="eece444_video_card_eece444_video_card_mapvo.sdf" last_build_time="1364450360" last_build_size="10195"/>
-        <Report name="eece444_video_card_eece444_video_card_mapvo.vo" last_build_time="1364450360" last_build_size="17045"/>
+        <Report name="eece444_video_card_eece444_video_card.bgn" last_build_time="1364513641" last_build_size="1953"/>
+        <Report name="eece444_video_card_eece444_video_card.jed" last_build_time="1364513641" last_build_size="500613"/>
+        <Report name="eece444_video_card_eece444_video_card.lsedata" last_build_time="1364513601" last_build_size="40942"/>
+        <Report name="eece444_video_card_eece444_video_card.ncd" last_build_time="1364513637" last_build_size="32185"/>
+        <Report name="eece444_video_card_eece444_video_card.ngd" last_build_time="1364513602" last_build_size="41180"/>
+        <Report name="eece444_video_card_eece444_video_card_map.ncd" last_build_time="1364513604" last_build_size="22953"/>
+        <Report name="eece444_video_card_eece444_video_card_mapvo.sdf" last_build_time="1364513607" last_build_size="24643"/>
+        <Report name="eece444_video_card_eece444_video_card_mapvo.vo" last_build_time="1364513607" last_build_size="37930"/>
     </Strategy>
 </BuildStatus>

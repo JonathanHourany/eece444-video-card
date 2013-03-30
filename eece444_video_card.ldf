@@ -3,13 +3,16 @@
     <Options/>
     <Implementation title="eece444_video_card" dir="eece444_video_card" description="eece444_video_card" default_strategy="Strategy1">
         <Options def_top="Top"/>
-        <Source name="CtrlLines.v" type="Verilog" type_short="Verilog">
+        <Source name="CtrlLines.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
         <Source name="Top.v" type="Verilog" type_short="Verilog">
             <Options top_module="Top"/>
         </Source>
         <Source name="Usart.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="Controller.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="eece444_video_card.lpf" type="Logic Preference" type_short="LPF">

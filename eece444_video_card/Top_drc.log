@@ -6,16 +6,28 @@ Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/or5g00/data/orc5glib.ngl'..
 
 Running DRC...
 
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_2/CO0' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_10/CO0' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_8/CO0' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_6/CO0' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_4/CO0' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_12/CO0' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_12/CO1' has no load
-WARNING - synthesis: logical net 'CNTRL/h_counter_8_add_4_12/S1' has no load
-WARNING - synthesis: DRC complete with 8 warnings
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_14/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_12/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_10/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_20/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_20/CO1' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_20/S1' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_18/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_12/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_12/CO1' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_12/S1' has no load
+WARNING - synthesis: logical net 'CNTRL/v_counter_10_add_4_16/CO0' has no load
+WARNING - synthesis: logical net 'CNTRL/h_counter_9_add_4_10/CO0' has no load
+WARNING - synthesis: DRC complete with 20 warnings
 
 Design Results:
-     33 blocks expanded
+     69 blocks expanded
 completed the first expansion
