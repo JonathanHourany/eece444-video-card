@@ -30,52 +30,18 @@
     </pins>
 
     <!--
-        Instances in netlist: 19
+        Instances in netlist: 30
     -->
 
-    <instance  name = "\CNTRL/LessThan_3"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/i7"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[10]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[10]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "\CNTRL/n1"  />
-        <nitem  name = "\CNTRL/n2"  />
-        <nitem  name = "\CNTRL/h_counter[10]"  />
-        <nitem  name = "\CNTRL/h_counter[9]"  />
-        <nitem  name = "\CNTRL/h_counter[8]"  />
-        <nitem  name = "\CNTRL/h_counter[7]"  />
-        <nitem  name = "\CNTRL/h_counter[6]"  />
-        <nitem  name = "\CNTRL/h_counter[5]"  />
-        <nitem  name = "\CNTRL/h_counter[4]"  />
-        <nitem  name = "\CNTRL/h_counter[3]"  />
-        <nitem  name = "\CNTRL/h_counter[2]"  />
-        <nitem  name = "\CNTRL/h_counter[1]"  />
-        <nitem  name = "\CNTRL/h_counter[0]"  />
-        <nitem  name = "\CNTRL/n4"  />
+        <nitem  name = "\CNTRL/n6"  />
+        <nitem  name = "\CNTRL/n7"  />
         </nets>
     </instance>
 
@@ -89,70 +55,44 @@
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/i2"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/i6"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "\CNTRL/n2"  />
-        </nets>
-    </instance>
-
-    <instance  name = "\CNTRL/i1"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "\CNTRL/n1"  />
-        </nets>
-    </instance>
-
-    <instance  name = "OSCC_1"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "OSC"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "osc_clk"  />
-        </nets>
-    </instance>
-
-    <instance  name = "\CNTRL/i5"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "i"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "H_SYNC"  />
         <nitem  name = "\CNTRL/n4"  />
+        <nitem  name = "\CNTRL/n5"  />
+        <nitem  name = "\CNTRL/n6"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/LessThan_5"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/LessThan_4"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[18]"  direction = "in"  />
-        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
         <pitem  name = "b[16]"  direction = "in"  />
         <pitem  name = "b[15]"  direction = "in"  />
         <pitem  name = "b[14]"  direction = "in"  />
-        <pitem  name = "b[13]"  direction = "in"  />
-        <pitem  name = "b[12]"  direction = "in"  />
-        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
         <pitem  name = "a[18]"  direction = "in"  />
         <pitem  name = "a[17]"  direction = "in"  />
         <pitem  name = "a[16]"  direction = "in"  />
@@ -178,6 +118,7 @@
         <nets>
         <nitem  name = "\CNTRL/n1"  />
         <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/v_counter[19]"  />
         <nitem  name = "\CNTRL/v_counter[18]"  />
         <nitem  name = "\CNTRL/v_counter[17]"  />
         <nitem  name = "\CNTRL/v_counter[16]"  />
@@ -197,36 +138,187 @@
         <nitem  name = "\CNTRL/v_counter[2]"  />
         <nitem  name = "\CNTRL/v_counter[1]"  />
         <nitem  name = "\CNTRL/v_counter[0]"  />
-        <nitem  name = "\CNTRL/n6"  />
+        <nitem  name = "\CNTRL/n5"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/i7"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "OSCC_1"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "OSC"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "V_SYNC"  />
-        <nitem  name = "\CNTRL/n6"  />
+        <nitem  name = "osc_clk"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/LessThan_7"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/LessThan_3"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/v_counter[19]"  />
+        <nitem  name = "\CNTRL/v_counter[18]"  />
+        <nitem  name = "\CNTRL/v_counter[17]"  />
+        <nitem  name = "\CNTRL/v_counter[16]"  />
+        <nitem  name = "\CNTRL/v_counter[15]"  />
+        <nitem  name = "\CNTRL/v_counter[14]"  />
+        <nitem  name = "\CNTRL/v_counter[13]"  />
+        <nitem  name = "\CNTRL/v_counter[12]"  />
+        <nitem  name = "\CNTRL/v_counter[11]"  />
+        <nitem  name = "\CNTRL/v_counter[10]"  />
+        <nitem  name = "\CNTRL/v_counter[9]"  />
+        <nitem  name = "\CNTRL/v_counter[8]"  />
+        <nitem  name = "\CNTRL/v_counter[7]"  />
+        <nitem  name = "\CNTRL/v_counter[6]"  />
+        <nitem  name = "\CNTRL/v_counter[5]"  />
+        <nitem  name = "\CNTRL/v_counter[4]"  />
+        <nitem  name = "\CNTRL/v_counter[3]"  />
+        <nitem  name = "\CNTRL/v_counter[2]"  />
+        <nitem  name = "\CNTRL/v_counter[1]"  />
+        <nitem  name = "\CNTRL/v_counter[0]"  />
+        <nitem  name = "\CNTRL/n4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "i7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n2"  />
+        <nitem  name = "rgb_en"  />
+        <nitem  name = "RED"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/LessThan_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
         <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/h_counter[10]"  />
+        <nitem  name = "\CNTRL/h_counter[9]"  />
+        <nitem  name = "\CNTRL/h_counter[8]"  />
+        <nitem  name = "\CNTRL/h_counter[7]"  />
+        <nitem  name = "\CNTRL/h_counter[6]"  />
+        <nitem  name = "\CNTRL/h_counter[5]"  />
+        <nitem  name = "\CNTRL/h_counter[4]"  />
+        <nitem  name = "\CNTRL/h_counter[3]"  />
+        <nitem  name = "\CNTRL/h_counter[2]"  />
+        <nitem  name = "\CNTRL/h_counter[1]"  />
+        <nitem  name = "\CNTRL/h_counter[0]"  />
+        <nitem  name = "\CNTRL/n8"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/LessThan_8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
@@ -255,11 +347,262 @@
         <nitem  name = "\CNTRL/h_counter[2]"  />
         <nitem  name = "\CNTRL/h_counter[1]"  />
         <nitem  name = "\CNTRL/h_counter[0]"  />
-        <nitem  name = "\CNTRL/n8"  />
+        <nitem  name = "\CNTRL/n9"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/i10"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/LessThan_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/h_counter[10]"  />
+        <nitem  name = "\CNTRL/h_counter[9]"  />
+        <nitem  name = "\CNTRL/h_counter[8]"  />
+        <nitem  name = "\CNTRL/h_counter[7]"  />
+        <nitem  name = "\CNTRL/h_counter[6]"  />
+        <nitem  name = "\CNTRL/h_counter[5]"  />
+        <nitem  name = "\CNTRL/h_counter[4]"  />
+        <nitem  name = "\CNTRL/h_counter[3]"  />
+        <nitem  name = "\CNTRL/h_counter[2]"  />
+        <nitem  name = "\CNTRL/h_counter[1]"  />
+        <nitem  name = "\CNTRL/h_counter[0]"  />
+        <nitem  name = "\CNTRL/n10"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i11"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n9"  />
+        <nitem  name = "\CNTRL/n10"  />
+        <nitem  name = "\CNTRL/n11"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i12"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n8"  />
+        <nitem  name = "\CNTRL/n12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "\CNTRL/n8"  />
+        <nitem  name = "\CNTRL/n11"  />
+        <nitem  name = "\CNTRL/n13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i14"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "H_SYNC"  />
+        <nitem  name = "\CNTRL/n7"  />
+        <nitem  name = "\CNTRL/n12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "rgb_en"  />
+        <nitem  name = "\CNTRL/n7"  />
+        <nitem  name = "\CNTRL/n13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/LessThan_15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/v_counter[19]"  />
+        <nitem  name = "\CNTRL/v_counter[18]"  />
+        <nitem  name = "\CNTRL/v_counter[17]"  />
+        <nitem  name = "\CNTRL/v_counter[16]"  />
+        <nitem  name = "\CNTRL/v_counter[15]"  />
+        <nitem  name = "\CNTRL/v_counter[14]"  />
+        <nitem  name = "\CNTRL/v_counter[13]"  />
+        <nitem  name = "\CNTRL/v_counter[12]"  />
+        <nitem  name = "\CNTRL/v_counter[11]"  />
+        <nitem  name = "\CNTRL/v_counter[10]"  />
+        <nitem  name = "\CNTRL/v_counter[9]"  />
+        <nitem  name = "\CNTRL/v_counter[8]"  />
+        <nitem  name = "\CNTRL/v_counter[7]"  />
+        <nitem  name = "\CNTRL/v_counter[6]"  />
+        <nitem  name = "\CNTRL/v_counter[5]"  />
+        <nitem  name = "\CNTRL/v_counter[4]"  />
+        <nitem  name = "\CNTRL/v_counter[3]"  />
+        <nitem  name = "\CNTRL/v_counter[2]"  />
+        <nitem  name = "\CNTRL/v_counter[1]"  />
+        <nitem  name = "\CNTRL/v_counter[0]"  />
+        <nitem  name = "\CNTRL/n16"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "V_SYNC"  />
+        <nitem  name = "\CNTRL/n16"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/LessThan_17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CNTRL/n1"  />
+        <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/h_counter[10]"  />
+        <nitem  name = "\CNTRL/h_counter[9]"  />
+        <nitem  name = "\CNTRL/h_counter[8]"  />
+        <nitem  name = "\CNTRL/h_counter[7]"  />
+        <nitem  name = "\CNTRL/h_counter[6]"  />
+        <nitem  name = "\CNTRL/h_counter[5]"  />
+        <nitem  name = "\CNTRL/h_counter[4]"  />
+        <nitem  name = "\CNTRL/h_counter[3]"  />
+        <nitem  name = "\CNTRL/h_counter[2]"  />
+        <nitem  name = "\CNTRL/h_counter[1]"  />
+        <nitem  name = "\CNTRL/h_counter[0]"  />
+        <nitem  name = "\CNTRL/n18"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CNTRL/i20"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -267,13 +610,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "\CNTRL/n8"  />
-        <nitem  name = "\CNTRL/n10"  />
-        <nitem  name = "\CNTRL/n49"  />
+        <nitem  name = "\CNTRL/n18"  />
+        <nitem  name = "\CNTRL/n20"  />
+        <nitem  name = "\CNTRL/n59"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/add_10"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/add_20"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
@@ -325,21 +668,21 @@
         <nitem  name = "\CNTRL/h_counter[2]"  />
         <nitem  name = "\CNTRL/h_counter[1]"  />
         <nitem  name = "\CNTRL/h_counter[0]"  />
-        <nitem  name = "\CNTRL/n13"  />
-        <nitem  name = "\CNTRL/n14"  />
-        <nitem  name = "\CNTRL/n15"  />
-        <nitem  name = "\CNTRL/n16"  />
-        <nitem  name = "\CNTRL/n17"  />
-        <nitem  name = "\CNTRL/n18"  />
-        <nitem  name = "\CNTRL/n19"  />
-        <nitem  name = "\CNTRL/n20"  />
-        <nitem  name = "\CNTRL/n21"  />
-        <nitem  name = "\CNTRL/n22"  />
         <nitem  name = "\CNTRL/n23"  />
+        <nitem  name = "\CNTRL/n24"  />
+        <nitem  name = "\CNTRL/n25"  />
+        <nitem  name = "\CNTRL/n26"  />
+        <nitem  name = "\CNTRL/n27"  />
+        <nitem  name = "\CNTRL/n28"  />
+        <nitem  name = "\CNTRL/n29"  />
+        <nitem  name = "\CNTRL/n30"  />
+        <nitem  name = "\CNTRL/n31"  />
+        <nitem  name = "\CNTRL/n32"  />
+        <nitem  name = "\CNTRL/n33"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/mux_11"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/mux_21"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[10]"  direction = "in"  />
         <pitem  name = "d1[9]"  direction = "in"  />
@@ -379,18 +722,9 @@
 
         <nets>
         <nitem  name = "\CNTRL/n1"  />
-        <nitem  name = "\CNTRL/n10"  />
-        <nitem  name = "\CNTRL/n13"  />
-        <nitem  name = "\CNTRL/n14"  />
-        <nitem  name = "\CNTRL/n15"  />
-        <nitem  name = "\CNTRL/n16"  />
-        <nitem  name = "\CNTRL/n17"  />
-        <nitem  name = "\CNTRL/n18"  />
-        <nitem  name = "\CNTRL/n19"  />
         <nitem  name = "\CNTRL/n20"  />
-        <nitem  name = "\CNTRL/n21"  />
-        <nitem  name = "\CNTRL/n22"  />
         <nitem  name = "\CNTRL/n23"  />
+        <nitem  name = "\CNTRL/n24"  />
         <nitem  name = "\CNTRL/n25"  />
         <nitem  name = "\CNTRL/n26"  />
         <nitem  name = "\CNTRL/n27"  />
@@ -400,14 +734,22 @@
         <nitem  name = "\CNTRL/n31"  />
         <nitem  name = "\CNTRL/n32"  />
         <nitem  name = "\CNTRL/n33"  />
-        <nitem  name = "\CNTRL/n34"  />
         <nitem  name = "\CNTRL/n35"  />
+        <nitem  name = "\CNTRL/n36"  />
+        <nitem  name = "\CNTRL/n37"  />
+        <nitem  name = "\CNTRL/n38"  />
+        <nitem  name = "\CNTRL/n39"  />
+        <nitem  name = "\CNTRL/n40"  />
+        <nitem  name = "\CNTRL/n41"  />
+        <nitem  name = "\CNTRL/n42"  />
+        <nitem  name = "\CNTRL/n43"  />
+        <nitem  name = "\CNTRL/n44"  />
+        <nitem  name = "\CNTRL/n45"  />
         </nets>
     </instance>
 
     <instance  name = "\CNTRL/v_counter"  library = "work"  arch = ""  type = "reg">
         <pins>
-        <pitem  name = "set[8]"  direction = "in"  />
         <pitem  name = "set[9]"  direction = "in"  />
         <pitem  name = "set[10]"  direction = "in"  />
         <pitem  name = "set[11]"  direction = "in"  />
@@ -418,6 +760,8 @@
         <pitem  name = "set[16]"  direction = "in"  />
         <pitem  name = "set[17]"  direction = "in"  />
         <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
         <pitem  name = "set[7]"  direction = "in"  />
         <pitem  name = "set[6]"  direction = "in"  />
         <pitem  name = "set[5]"  direction = "in"  />
@@ -426,6 +770,7 @@
         <pitem  name = "set[2]"  direction = "in"  />
         <pitem  name = "set[1]"  direction = "in"  />
         <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
         <pitem  name = "reset[18]"  direction = "in"  />
         <pitem  name = "reset[17]"  direction = "in"  />
         <pitem  name = "reset[16]"  direction = "in"  />
@@ -446,6 +791,7 @@
         <pitem  name = "reset[1]"  direction = "in"  />
         <pitem  name = "reset[0]"  direction = "in"  />
         <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[19]"  direction = "out"  />
         <pitem  name = "q[18]"  direction = "out"  />
         <pitem  name = "q[17]"  direction = "out"  />
         <pitem  name = "q[16]"  direction = "out"  />
@@ -465,6 +811,7 @@
         <pitem  name = "q[2]"  direction = "out"  />
         <pitem  name = "q[1]"  direction = "out"  />
         <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[19]"  direction = "in"  />
         <pitem  name = "d[18]"  direction = "in"  />
         <pitem  name = "d[17]"  direction = "in"  />
         <pitem  name = "d[16]"  direction = "in"  />
@@ -489,6 +836,7 @@
         <nets>
         <nitem  name = "\CNTRL/n1"  />
         <nitem  name = "osc_clk"  />
+        <nitem  name = "\CNTRL/v_counter[19]"  />
         <nitem  name = "\CNTRL/v_counter[18]"  />
         <nitem  name = "\CNTRL/v_counter[17]"  />
         <nitem  name = "\CNTRL/v_counter[16]"  />
@@ -508,17 +856,6 @@
         <nitem  name = "\CNTRL/v_counter[2]"  />
         <nitem  name = "\CNTRL/v_counter[1]"  />
         <nitem  name = "\CNTRL/v_counter[0]"  />
-        <nitem  name = "\CNTRL/n73"  />
-        <nitem  name = "\CNTRL/n74"  />
-        <nitem  name = "\CNTRL/n75"  />
-        <nitem  name = "\CNTRL/n76"  />
-        <nitem  name = "\CNTRL/n77"  />
-        <nitem  name = "\CNTRL/n78"  />
-        <nitem  name = "\CNTRL/n79"  />
-        <nitem  name = "\CNTRL/n80"  />
-        <nitem  name = "\CNTRL/n81"  />
-        <nitem  name = "\CNTRL/n82"  />
-        <nitem  name = "\CNTRL/n83"  />
         <nitem  name = "\CNTRL/n84"  />
         <nitem  name = "\CNTRL/n85"  />
         <nitem  name = "\CNTRL/n86"  />
@@ -527,31 +864,45 @@
         <nitem  name = "\CNTRL/n89"  />
         <nitem  name = "\CNTRL/n90"  />
         <nitem  name = "\CNTRL/n91"  />
+        <nitem  name = "\CNTRL/n92"  />
+        <nitem  name = "\CNTRL/n93"  />
+        <nitem  name = "\CNTRL/n94"  />
+        <nitem  name = "\CNTRL/n95"  />
+        <nitem  name = "\CNTRL/n96"  />
+        <nitem  name = "\CNTRL/n97"  />
+        <nitem  name = "\CNTRL/n98"  />
+        <nitem  name = "\CNTRL/n99"  />
+        <nitem  name = "\CNTRL/n100"  />
+        <nitem  name = "\CNTRL/n101"  />
+        <nitem  name = "\CNTRL/n102"  />
+        <nitem  name = "\CNTRL/n103"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/LessThan_13"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/LessThan_23"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "a[19]"  direction = "in"  />
         <pitem  name = "a[16]"  direction = "in"  />
         <pitem  name = "a[15]"  direction = "in"  />
-        <pitem  name = "a[11]"  direction = "in"  />
-        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
         <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "a[18]"  direction = "in"  />
-        <pitem  name = "a[17]"  direction = "in"  />
-        <pitem  name = "a[14]"  direction = "in"  />
-        <pitem  name = "a[13]"  direction = "in"  />
-        <pitem  name = "a[12]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
         <pitem  name = "b[18]"  direction = "in"  />
         <pitem  name = "b[17]"  direction = "in"  />
         <pitem  name = "b[16]"  direction = "in"  />
@@ -577,6 +928,7 @@
         <nets>
         <nitem  name = "\CNTRL/n1"  />
         <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/v_counter[19]"  />
         <nitem  name = "\CNTRL/v_counter[18]"  />
         <nitem  name = "\CNTRL/v_counter[17]"  />
         <nitem  name = "\CNTRL/v_counter[16]"  />
@@ -596,11 +948,11 @@
         <nitem  name = "\CNTRL/v_counter[2]"  />
         <nitem  name = "\CNTRL/v_counter[1]"  />
         <nitem  name = "\CNTRL/v_counter[0]"  />
-        <nitem  name = "\CNTRL/n48"  />
+        <nitem  name = "\CNTRL/n58"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/i15"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/i25"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -608,11 +960,11 @@
 
         <nets>
         <nitem  name = "RESET"  />
-        <nitem  name = "\CNTRL/n49"  />
+        <nitem  name = "\CNTRL/n59"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/i16"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/i26"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -620,15 +972,16 @@
         </pins>
 
         <nets>
-        <nitem  name = "\CNTRL/n48"  />
-        <nitem  name = "\CNTRL/n49"  />
-        <nitem  name = "\CNTRL/n50"  />
+        <nitem  name = "\CNTRL/n58"  />
+        <nitem  name = "\CNTRL/n59"  />
+        <nitem  name = "\CNTRL/n60"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/add_16"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/add_26"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
         <pitem  name = "b[18]"  direction = "in"  />
         <pitem  name = "b[17]"  direction = "in"  />
         <pitem  name = "b[16]"  direction = "in"  />
@@ -648,6 +1001,7 @@
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
         <pitem  name = "a[18]"  direction = "in"  />
         <pitem  name = "a[17]"  direction = "in"  />
         <pitem  name = "a[16]"  direction = "in"  />
@@ -667,6 +1021,7 @@
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[19]"  direction = "out"  />
         <pitem  name = "o[18]"  direction = "out"  />
         <pitem  name = "o[17]"  direction = "out"  />
         <pitem  name = "o[16]"  direction = "out"  />
@@ -691,6 +1046,7 @@
         <nets>
         <nitem  name = "\CNTRL/n1"  />
         <nitem  name = "\CNTRL/n2"  />
+        <nitem  name = "\CNTRL/v_counter[19]"  />
         <nitem  name = "\CNTRL/v_counter[18]"  />
         <nitem  name = "\CNTRL/v_counter[17]"  />
         <nitem  name = "\CNTRL/v_counter[16]"  />
@@ -710,16 +1066,6 @@
         <nitem  name = "\CNTRL/v_counter[2]"  />
         <nitem  name = "\CNTRL/v_counter[1]"  />
         <nitem  name = "\CNTRL/v_counter[0]"  />
-        <nitem  name = "\CNTRL/n53"  />
-        <nitem  name = "\CNTRL/n54"  />
-        <nitem  name = "\CNTRL/n55"  />
-        <nitem  name = "\CNTRL/n56"  />
-        <nitem  name = "\CNTRL/n57"  />
-        <nitem  name = "\CNTRL/n58"  />
-        <nitem  name = "\CNTRL/n59"  />
-        <nitem  name = "\CNTRL/n60"  />
-        <nitem  name = "\CNTRL/n61"  />
-        <nitem  name = "\CNTRL/n62"  />
         <nitem  name = "\CNTRL/n63"  />
         <nitem  name = "\CNTRL/n64"  />
         <nitem  name = "\CNTRL/n65"  />
@@ -729,11 +1075,23 @@
         <nitem  name = "\CNTRL/n69"  />
         <nitem  name = "\CNTRL/n70"  />
         <nitem  name = "\CNTRL/n71"  />
+        <nitem  name = "\CNTRL/n72"  />
+        <nitem  name = "\CNTRL/n73"  />
+        <nitem  name = "\CNTRL/n74"  />
+        <nitem  name = "\CNTRL/n75"  />
+        <nitem  name = "\CNTRL/n76"  />
+        <nitem  name = "\CNTRL/n77"  />
+        <nitem  name = "\CNTRL/n78"  />
+        <nitem  name = "\CNTRL/n79"  />
+        <nitem  name = "\CNTRL/n80"  />
+        <nitem  name = "\CNTRL/n81"  />
+        <nitem  name = "\CNTRL/n82"  />
         </nets>
     </instance>
 
-    <instance  name = "\CNTRL/mux_17"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "\CNTRL/mux_27"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "d1[19]"  direction = "in"  />
         <pitem  name = "d1[18]"  direction = "in"  />
         <pitem  name = "d1[17]"  direction = "in"  />
         <pitem  name = "d1[16]"  direction = "in"  />
@@ -754,6 +1112,7 @@
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
         <pitem  name = "d0[18]"  direction = "in"  />
         <pitem  name = "d0[17]"  direction = "in"  />
         <pitem  name = "d0[16]"  direction = "in"  />
@@ -773,6 +1132,7 @@
         <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[19]"  direction = "out"  />
         <pitem  name = "o[18]"  direction = "out"  />
         <pitem  name = "o[17]"  direction = "out"  />
         <pitem  name = "o[16]"  direction = "out"  />
@@ -796,17 +1156,7 @@
 
         <nets>
         <nitem  name = "\CNTRL/n1"  />
-        <nitem  name = "\CNTRL/n50"  />
-        <nitem  name = "\CNTRL/n53"  />
-        <nitem  name = "\CNTRL/n54"  />
-        <nitem  name = "\CNTRL/n55"  />
-        <nitem  name = "\CNTRL/n56"  />
-        <nitem  name = "\CNTRL/n57"  />
-        <nitem  name = "\CNTRL/n58"  />
-        <nitem  name = "\CNTRL/n59"  />
         <nitem  name = "\CNTRL/n60"  />
-        <nitem  name = "\CNTRL/n61"  />
-        <nitem  name = "\CNTRL/n62"  />
         <nitem  name = "\CNTRL/n63"  />
         <nitem  name = "\CNTRL/n64"  />
         <nitem  name = "\CNTRL/n65"  />
@@ -816,6 +1166,7 @@
         <nitem  name = "\CNTRL/n69"  />
         <nitem  name = "\CNTRL/n70"  />
         <nitem  name = "\CNTRL/n71"  />
+        <nitem  name = "\CNTRL/n72"  />
         <nitem  name = "\CNTRL/n73"  />
         <nitem  name = "\CNTRL/n74"  />
         <nitem  name = "\CNTRL/n75"  />
@@ -826,7 +1177,6 @@
         <nitem  name = "\CNTRL/n80"  />
         <nitem  name = "\CNTRL/n81"  />
         <nitem  name = "\CNTRL/n82"  />
-        <nitem  name = "\CNTRL/n83"  />
         <nitem  name = "\CNTRL/n84"  />
         <nitem  name = "\CNTRL/n85"  />
         <nitem  name = "\CNTRL/n86"  />
@@ -835,6 +1185,18 @@
         <nitem  name = "\CNTRL/n89"  />
         <nitem  name = "\CNTRL/n90"  />
         <nitem  name = "\CNTRL/n91"  />
+        <nitem  name = "\CNTRL/n92"  />
+        <nitem  name = "\CNTRL/n93"  />
+        <nitem  name = "\CNTRL/n94"  />
+        <nitem  name = "\CNTRL/n95"  />
+        <nitem  name = "\CNTRL/n96"  />
+        <nitem  name = "\CNTRL/n97"  />
+        <nitem  name = "\CNTRL/n98"  />
+        <nitem  name = "\CNTRL/n99"  />
+        <nitem  name = "\CNTRL/n100"  />
+        <nitem  name = "\CNTRL/n101"  />
+        <nitem  name = "\CNTRL/n102"  />
+        <nitem  name = "\CNTRL/n103"  />
         </nets>
     </instance>
 
@@ -901,17 +1263,17 @@
         <nitem  name = "\CNTRL/h_counter[2]"  />
         <nitem  name = "\CNTRL/h_counter[1]"  />
         <nitem  name = "\CNTRL/h_counter[0]"  />
-        <nitem  name = "\CNTRL/n25"  />
-        <nitem  name = "\CNTRL/n26"  />
-        <nitem  name = "\CNTRL/n27"  />
-        <nitem  name = "\CNTRL/n28"  />
-        <nitem  name = "\CNTRL/n29"  />
-        <nitem  name = "\CNTRL/n30"  />
-        <nitem  name = "\CNTRL/n31"  />
-        <nitem  name = "\CNTRL/n32"  />
-        <nitem  name = "\CNTRL/n33"  />
-        <nitem  name = "\CNTRL/n34"  />
         <nitem  name = "\CNTRL/n35"  />
+        <nitem  name = "\CNTRL/n36"  />
+        <nitem  name = "\CNTRL/n37"  />
+        <nitem  name = "\CNTRL/n38"  />
+        <nitem  name = "\CNTRL/n39"  />
+        <nitem  name = "\CNTRL/n40"  />
+        <nitem  name = "\CNTRL/n41"  />
+        <nitem  name = "\CNTRL/n42"  />
+        <nitem  name = "\CNTRL/n43"  />
+        <nitem  name = "\CNTRL/n44"  />
+        <nitem  name = "\CNTRL/n45"  />
         </nets>
     </instance>
 

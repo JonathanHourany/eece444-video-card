@@ -1,0 +1,14 @@
+module test_bench();
+
+  reg clk, reset;
+  	 initial begin
+  		 #1 reset 	= 0;
+  		 #1 clk 	= 0;
+  		 #1 reset 	= 1;
+  	 end
+  	 
+  	 always #1 clk = ~clk
+  	 
+  	 Top(reset, H_SYNC, V_SYNC, RED);
+
+endmodule

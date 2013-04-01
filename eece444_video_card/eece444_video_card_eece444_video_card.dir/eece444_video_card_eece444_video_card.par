@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Mar 28 16:33:27 2013
+Sun Mar 31 16:06:54 2013
 
 C:/lscc/diamond/2.1_x64/ispfpga\bin\nt64\par -f
 eece444_video_card_eece444_video_card.p2t
@@ -18,11 +18,11 @@ Preference file: eece444_video_card_eece444_video_card.prf.
 Level/      Number      Worst       Timing      Run         NCD
 Cost [ncd]  Unrouted    Slack       Score       Time        Status
 ----------  --------    -----       --------    -----       ------
-5_1   *     0           32.572      0           29          Complete        
+5_1   *     0           28.896      0           05          Complete        
 
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 29 secs 
+Total (real) run time for 1-seed: 5 secs 
 
 par done!

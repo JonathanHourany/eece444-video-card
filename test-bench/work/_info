@@ -8,44 +8,44 @@ Z0 dC:\Modeltech_pe_edu_10.2a\examples
 !i10e 25
 !i10f 100
 vController
-!s110 1364450089
+!s110 1364770922
 !i10b 1
-!s100 3RMRHb`67b[LWDl1e]fim1
-IdfKb8e5?IA2aO3l?BHd<K2
+!s100 cHUVkKkW:Q=N@a6aFC]F`2
+I_TlEB3UG@ONGWQU;>eS5I0
 Z1 V`JN@9S9cnhjKRR_L]QIcM3
 Z2 dC:\Users\fox\programming\eece444-video-card\test-bench
-w1364450082
-8C:\Users\fox\programming\eece444-video-card\Controller.v
-FC:\Users\fox\programming\eece444-video-card\Controller.v
+w1364770907
+Z3 8C:\Users\fox\programming\eece444-video-card\Controller.v
+Z4 FC:\Users\fox\programming\eece444-video-card\Controller.v
 L0 9
-Z3 OP;L;10.2a;57
+Z5 OP;L;10.2a;57
 r1
 !s85 0
 31
-!s108 1364450089.179000
+!s108 1364770922.968000
 !s107 C:\Users\fox\programming\eece444-video-card\Controller.v|
-!s90 -reportprogress|300|-work|work|C:\Users\fox\programming\eece444-video-card\Controller.v|
+Z6 !s90 -reportprogress|300|-work|work|C:\Users\fox\programming\eece444-video-card\Controller.v|
 !s101 -O0
-Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
-Z5 n@controller
+Z7 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
+Z8 n@controller
 vTop
-Z6 !s110 1364449749
-Z7 Ic^:Lj4BTBbU<f=h9AmjDl1
+Z9 !s100 g@6T[D7d`M3WEdW`=d6=O0
+Z10 I]QH0_?9kH0><>ZV_B1n_70
 R1
 R2
-Z8 w1364449728
-Z9 8C:/Users/fox/programming/eece444-video-card/Top.v
-Z10 FC:/Users/fox/programming/eece444-video-card/Top.v
+Z11 w1364767370
+Z12 8C:\Users\fox\programming\eece444-video-card\Top.v
+Z13 FC:\Users\fox\programming\eece444-video-card\Top.v
 L0 9
-R3
+R5
 r1
 31
-Z11 !s90 -reportprogress|300|-work|work|C:/Users/fox/programming/eece444-video-card/Top.v|
-R4
+Z14 !s90 -reportprogress|300|-work|work|C:\Users\fox\programming\eece444-video-card\Top.v|
+R7
 n@top
+Z15 !s110 1364767707
+Z16 !s108 1364767707.427000
+Z17 !s107 C:\Users\fox\programming\eece444-video-card\Top.v|
 !i10b 1
-Z12 !s100 ;YN6Ah4G@CSz4@icO8Wcl2
 !s85 0
-Z13 !s108 1364449749.181000
-Z14 !s107 C:/Users/fox/programming/eece444-video-card/Top.v|
 !s101 -O0

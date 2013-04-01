@@ -19,9 +19,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card/eece444_video_card_eece444_video_card.jed</File>
-			<FileTime>03/26/13 14:23:30</FileTime>
-			<JedecChecksum>0x3BF7</JedecChecksum>
+			<File>C:/Users/fox/programming/eece444-video-card/eece444_video_card/eece444_video_card_eece444_video_card.jed</File>
+			<FileTime>03/31/13 12:30:28</FileTime>
+			<JedecChecksum>0xE57D</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
@@ -47,6 +47,7 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>Lattice FTUSB Interface Cable A Location 0000 Serial A</USBID>
 		<JTAGPinSetting>
 			TRST	ABSENT;
 			ISPEN	ABSENT;

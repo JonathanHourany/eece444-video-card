@@ -1,26 +1,29 @@
 ----------------------------------------------------------------------
 Report for cell Top.<NoName>
-Register bits:  30 of 2280 (1.316%)
+Register bits:  31 of 2280 (1.360%)
 I/O cells:      4
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        16          100.0
-                            FD1S3IX        30          100.0
+                            FD1S3IX        31          100.0
                                 GSR         1          100.0
                                  IB         1          100.0
-                                 OB         3          100.0
-                           ORCALUT4        14          100.0
+                                 OB         2          100.0
+                                OBZ         1          100.0
+                           ORCALUT4        39          100.0
                                OSCC         1          100.0
+                              PFUMX         1          100.0
                         VERIFIC_PWR         1          100.0
 SUB MODULES
                          Controller         1
-                              TOTAL        68
+                              TOTAL        95
 ----------------------------------------------------------------------
 Report for cell Controller.v1
 Instance Path : CNTRL
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        16          100.0
-                            FD1S3IX        30          100.0
-                           ORCALUT4        14          100.0
-                              TOTAL        60
+                            FD1S3IX        31          100.0
+                           ORCALUT4        39          100.0
+                              PFUMX         1          100.0
+                              TOTAL        87
