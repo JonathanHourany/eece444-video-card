@@ -18,13 +18,13 @@
 
     `define H_SYNC_PULSE		11'd96		/*< Length of Sync Pulse 			>*/
 	`define H_BACK_PORCH_END	11'd144		/*< Pulse len + Porch Len			>*/
-    `define H_FRONT_PORCH_STRT  11'd784		/*< Front Porch Len - Max			>*/
+    `define H_FRONT_PORCH_STRT  11'd783		/*< Front Porch Len - Max			>*/
     `define H_COUNT_MAX     	11'd799		/*< Max line pulses for resolution 	>*/
 
     `define V_SYNC_PULSE		19'd1600
-	`define V_BACK_PORCH_END	19'd28000
-    `define V_FRONT_PORCH_STRT  19'd408800
-    `define V_COUNT_MAX     	19'd416799
+	`define V_BACK_PORCH_END	19'd27200
+    `define V_FRONT_PORCH_STRT  19'd412000
+    `define V_COUNT_MAX     	19'd419999
 	
 	/*** State Machine for H_SYNC ***/
 	always @(*) begin

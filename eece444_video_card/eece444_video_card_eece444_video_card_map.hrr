@@ -3,20 +3,20 @@ Report for cell Top
    Instance path: Top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      36.00        100.0
-                                  LUT4	      40.00        100.0
+                                  SLIC	      37.00        100.0
+                                  LUT4	      41.00        100.0
                                  IOBUF	          4        100.0
                                 PFUREG	         31        100.0
                                 RIPPLE	         16        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                            Controller	          1        98.6
+                            Controller	          1        97.3
 ---------------------------------------------------
 Report for cell Controller
    Instance path: Top/CNTRL
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      35.50        98.6
-                                  LUT4	      39.00        97.5
+                                  SLIC	      36.00        97.3
+                                  LUT4	      40.00        97.6
                                 PFUREG	         31        100.0
                                 RIPPLE	         16        100.0

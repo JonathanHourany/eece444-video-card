@@ -7,28 +7,28 @@ Command line:   map -a MachXO -p LCMXO2280C -t FTBGA256 -s 3 -oc Commercial
      eece444_video_card_eece444_video_card.ngd -o
      eece444_video_card_eece444_video_card_map.ncd -pr
      eece444_video_card_eece444_video_card.prf -mp
-     eece444_video_card_eece444_video_card.mrp
-     C:/Users/fox/programming/eece444-video-card/eece444_video_card.lpf -c 0
+     eece444_video_card_eece444_video_card.mrp C:/Users/OctalByte/Documents/GitH
+     ub/eece444-video-card/eece444_video_card.lpf -c 0
 Target Vendor:  LATTICE
 Target Device:  LCMXO2280CFTBGA256
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 2.1.0.103
-Mapped on:  03/31/13  16:06:53
+Mapped on:  04/05/13  19:44:41
 
 Design Summary
 --------------
 
    Number of PFU registers:    31
-   Number of SLICEs:            36 out of  1140 (3%)
-      SLICEs(logic/ROM):        36 out of   900 (4%)
+   Number of SLICEs:            37 out of  1140 (3%)
+      SLICEs(logic/ROM):        37 out of   900 (4%)
       SLICEs(logic/ROM/RAM):     0 out of   240 (0%)
           As RAM:            0
           As Logic/ROM:      0
-   Number of logic LUT4s:      40
+   Number of logic LUT4s:      41
    Number of distributed RAM:   0 (0 LUT4s)
    Number of ripple logic:     16 (32 LUT4s)
    Number of shift registers:   0
-   Total number of LUT4s:      72
+   Total number of LUT4s:      73
    Number of external PIOs: 4 out of 211 (2%)
    Number of PLLs:  0 out of 2 (0%)
    Number of block RAMs:  0 out of 3 (0%)
@@ -47,30 +47,30 @@ Design Summary
      Net osc_clk: 16 loads, 16 rising, 0 falling (Driver: OSCC_1 )
    Number of Clock Enables:  0
    Number of LSRs:  2
-     Net CNTRL/n20: 6 loads, 6 LSLICEs
      Net CNTRL/n60: 10 loads, 10 LSLICEs
+     Net CNTRL/n20_adj_4: 6 loads, 6 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
      Net CNTRL/n60: 10 loads
-     Net CNTRL/n20: 6 loads
+     Net CNTRL/n20_adj_4: 6 loads
+     Net CNTRL/v_counter_14: 6 loads
      Net CNTRL/h_counter_7: 5 loads
+     Net CNTRL/h_counter_9: 5 loads
+     Net CNTRL/v_counter_11: 5 loads
      Net CNTRL/v_counter_13: 5 loads
-     Net CNTRL/v_counter_18: 5 loads
-     Net CNTRL/v_counter_9: 5 loads
-     Net CNTRL/h_counter_10: 4 loads
 
                                     Page 1
 
 
 
 
-Design:  Top                                           Date:  03/31/13  16:06:53
+Design:  Top                                           Date:  04/05/13  19:44:41
 
 Design Summary (cont)
 ---------------------
-     Net CNTRL/h_counter_5: 4 loads
-     Net CNTRL/h_counter_6: 4 loads
-     Net CNTRL/v_counter_10: 4 loads
+     Net CNTRL/v_counter_19: 5 loads
+     Net CNTRL/v_counter_6: 5 loads
+     Net CNTRL/v_counter_7: 5 loads
 
 
 
@@ -104,25 +104,25 @@ Removed logic
 
 Block GSR_INST undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
-Signal CNTRL/h_counter_13_add_4_10/CO0 undriven or does not drive anything -
-     clipped.
-Signal CNTRL/v_counter_14_add_4_6/CO0 undriven or does not drive anything -
-     clipped.
 Signal CNTRL/v_counter_14_add_4_14/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_13_add_4_2/CO0 undriven or does not drive anything -
+Signal CNTRL/v_counter_14_add_4_2/CO0 undriven or does not drive anything -
      clipped.
 Signal CNTRL/v_counter_14_add_4_16/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_13_add_4_12/S1 undriven or does not drive anything -
+Signal CNTRL/v_counter_14_add_4_4/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_13_add_4_12/CO1 undriven or does not drive anything -
-     clipped.
-Signal CNTRL/h_counter_13_add_4_12/CO0 undriven or does not drive anything -
-     clipped.
-Signal CNTRL/h_counter_13_add_4_4/CO0 undriven or does not drive anything -
+Signal CNTRL/v_counter_14_add_4_6/CO0 undriven or does not drive anything -
      clipped.
 Signal CNTRL/h_counter_13_add_4_6/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_13_add_4_8/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_13_add_4_2/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_13_add_4_10/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/v_counter_14_add_4_18/CO0 undriven or does not drive anything -
      clipped.
 
                                     Page 2
@@ -130,27 +130,27 @@ Signal CNTRL/h_counter_13_add_4_6/CO0 undriven or does not drive anything -
 
 
 
-Design:  Top                                           Date:  03/31/13  16:06:53
+Design:  Top                                           Date:  04/05/13  19:44:41
 
 Removed logic (cont)
 --------------------
-Signal CNTRL/v_counter_14_add_4_8/CO0 undriven or does not drive anything -
-     clipped.
-Signal CNTRL/v_counter_14_add_4_18/CO0 undriven or does not drive anything -
-     clipped.
 Signal CNTRL/v_counter_14_add_4_20/CO1 undriven or does not drive anything -
      clipped.
 Signal CNTRL/v_counter_14_add_4_20/CO0 undriven or does not drive anything -
      clipped.
-Signal CNTRL/h_counter_13_add_4_8/CO0 undriven or does not drive anything -
-     clipped.
-Signal CNTRL/v_counter_14_add_4_2/CO0 undriven or does not drive anything -
-     clipped.
-Signal CNTRL/v_counter_14_add_4_4/CO0 undriven or does not drive anything -
+Signal CNTRL/v_counter_14_add_4_8/CO0 undriven or does not drive anything -
      clipped.
 Signal CNTRL/v_counter_14_add_4_10/CO0 undriven or does not drive anything -
      clipped.
+Signal CNTRL/h_counter_13_add_4_12/S1 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_13_add_4_12/CO1 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_13_add_4_12/CO0 undriven or does not drive anything -
+     clipped.
 Signal CNTRL/v_counter_14_add_4_12/CO0 undriven or does not drive anything -
+     clipped.
+Signal CNTRL/h_counter_13_add_4_4/CO0 undriven or does not drive anything -
      clipped.
 Block i1 was optimized away.
 
@@ -173,7 +173,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 34 MB
+   Peak Memory Usage: 33 MB
 
 
 

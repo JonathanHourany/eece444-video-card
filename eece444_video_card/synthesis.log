@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Mar 31 16:06:53 2013
+Fri Apr 05 19:44:37 2013
 
 
 Command Line:  synthesis -f eece444_video_card_eece444_video_card_lattice.synproj 
@@ -27,7 +27,7 @@ INFO: ### Speed   : 3
 INFO: ##########################################################
 INFO:                                                           
 INFO: Optimization Goal = Balanced
-INFO: -top option is not used
+INFO: Top level module name = Top
 INFO: Target Frequency = 200.000000 MHz
 INFO: Max Fanout = 1000
 INFO: Timing Path count = 3
@@ -49,23 +49,23 @@ INFO: ROM style = auto
 INFO: RAM style = auto
 INFO: -comp option is FALSE
 INFO: -syn option is FALSE
-INFO: -p C:/Users/fox/programming/eece444-video-card (searchpath added)
+INFO: -p C:/Users/OctalByte/Documents/GitHub/eece444-video-card (searchpath added)
 INFO: -p C:/lscc/diamond/2.1_x64/ispfpga/mj5g00/data (searchpath added)
-INFO: -p C:/Users/fox/programming/eece444-video-card/eece444_video_card (searchpath added)
-INFO: -p C:/Users/fox/programming/eece444-video-card (searchpath added)
-INFO: Verilog design file = C:/Users/fox/programming/eece444-video-card/Top.v
-INFO: Verilog design file = C:/Users/fox/programming/eece444-video-card/Controller.v
+INFO: -p C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card (searchpath added)
+INFO: -p C:/Users/OctalByte/Documents/GitHub/eece444-video-card (searchpath added)
+INFO: Verilog design file = C:/Users/OctalByte/Documents/GitHub/eece444-video-card/Top.v
+INFO: Verilog design file = C:/Users/OctalByte/Documents/GitHub/eece444-video-card/Controller.v
 INFO: Ngd file = eece444_video_card_eece444_video_card.ngd
 INFO: -sdc option: sdc file input not used
 INFO: -lpf option: output file option is OFF
 INFO: hardtimer checking is enabled (default); -dt option not used
 INFO: -r option is OFF [ Remove LOC Properties is OFF ]
-INFO: The default vhdl library search path is now "C:/lscc/diamond/2.1_x64/cae_library/vhdl_packages/vdbs" (VHDL-1504)
+-- Technology check ok...MachXO, MachXO2...
 INFO: * compile design *
 INFO: Compile Design Begin
-c:/users/fox/programming/eece444-video-card/top.v(9): INFO: compiling module Top (VERI-1018)
+c:/users/octalbyte/documents/github/eece444-video-card/top.v(9): INFO: compiling module Top (VERI-1018)
 C:/lscc/diamond/2.1_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo.v(1372): INFO: compiling module OSCC (VERI-1018)
-c:/users/fox/programming/eece444-video-card/controller.v(9): INFO: compiling module Controller (VERI-1018)
+c:/users/octalbyte/documents/github/eece444-video-card/controller.v(9): INFO: compiling module Controller (VERI-1018)
 INFO: Top level module name = Top
 
 
@@ -85,7 +85,7 @@ GSR => 1
 IB => 1
 OB => 2
 OBZ => 1
-ORCALUT4 => 39
+ORCALUT4 => 40
 OSCC => 1
 PFUMX => 1
 ################### End Area Report ##################
@@ -103,15 +103,15 @@ Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : n60, loads : 20
-  Net : n20, loads : 11
-  Net : h_counter_7, loads : 5
+  Net : n20_adj_4, loads : 11
+  Net : v_counter_14, loads : 6
+  Net : v_counter_6, loads : 5
+  Net : v_counter_11, loads : 5
+  Net : v_counter_19, loads : 5
+  Net : v_counter_8, loads : 5
   Net : v_counter_13, loads : 5
-  Net : v_counter_9, loads : 5
-  Net : v_counter_18, loads : 5
-  Net : h_counter_10, loads : 4
-  Net : v_counter_10, loads : 4
-  Net : v_counter_11, loads : 4
-  Net : h_counter_6, loads : 4
+  Net : v_counter_7, loads : 5
+  Net : h_counter_7, loads : 5
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -121,7 +121,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets osc_clk]                 |  200.000 MHz|  128.189 MHz|     6 *
+clk0 [get_nets osc_clk]                 |  200.000 MHz|  116.604 MHz|     7 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -129,8 +129,8 @@ clk0 [get_nets osc_clk]                 |  200.000 MHz|  128.189 MHz|     6 *
 1 constraints not met.
 
 
-Peak Memory Usage: 56.246  MB
+Peak Memory Usage: 55.344  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.343  secs
+Elapsed CPU time for LSE flow : 2.266  secs
 --------------------------------------------------------------

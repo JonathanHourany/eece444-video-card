@@ -2,32 +2,32 @@
 [ END MERGED ]
 [ START CLIPPED ]
 GND_net
-CNTRL/h_counter_13_add_4_10/CO0
-CNTRL/v_counter_14_add_4_6/CO0
 CNTRL/v_counter_14_add_4_14/CO0
-CNTRL/h_counter_13_add_4_2/CO0
+CNTRL/v_counter_14_add_4_2/CO0
 CNTRL/v_counter_14_add_4_16/CO0
-CNTRL/h_counter_13_add_4_12/S1
-CNTRL/h_counter_13_add_4_12/CO1
-CNTRL/h_counter_13_add_4_12/CO0
-CNTRL/h_counter_13_add_4_4/CO0
+CNTRL/v_counter_14_add_4_4/CO0
+CNTRL/v_counter_14_add_4_6/CO0
 CNTRL/h_counter_13_add_4_6/CO0
-CNTRL/v_counter_14_add_4_8/CO0
+CNTRL/h_counter_13_add_4_8/CO0
+CNTRL/h_counter_13_add_4_2/CO0
+CNTRL/h_counter_13_add_4_10/CO0
 CNTRL/v_counter_14_add_4_18/CO0
 CNTRL/v_counter_14_add_4_20/CO1
 CNTRL/v_counter_14_add_4_20/CO0
-CNTRL/h_counter_13_add_4_8/CO0
-CNTRL/v_counter_14_add_4_2/CO0
-CNTRL/v_counter_14_add_4_4/CO0
+CNTRL/v_counter_14_add_4_8/CO0
 CNTRL/v_counter_14_add_4_10/CO0
+CNTRL/h_counter_13_add_4_12/S1
+CNTRL/h_counter_13_add_4_12/CO1
+CNTRL/h_counter_13_add_4_12/CO0
 CNTRL/v_counter_14_add_4_12/CO0
+CNTRL/h_counter_13_add_4_4/CO0
 [ END CLIPPED ]
 [ START OSC ]
 osc_clk
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 2.1.0.103 -- WARNING: Map write only section -- Sun Mar 31 16:06:53 2013
+# map:  version Diamond (64-bit) 2.1.0.103 -- WARNING: Map write only section -- Fri Apr 05 19:44:41 2013
 
 SYSCONFIG INBUF=ON CONFIG_SECURE=OFF ;
 LOCATE COMP "V_SYNC" SITE "H2" ;
