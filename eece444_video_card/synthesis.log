@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Apr 05 19:44:37 2013
+Wed Apr 10 22:33:24 2013
 
 
 Command Line:  synthesis -f eece444_video_card_eece444_video_card_lattice.synproj 
@@ -27,7 +27,7 @@ INFO: ### Speed   : 3
 INFO: ##########################################################
 INFO:                                                           
 INFO: Optimization Goal = Balanced
-INFO: Top level module name = Top
+INFO: -top option is not used
 INFO: Target Frequency = 200.000000 MHz
 INFO: Max Fanout = 1000
 INFO: Timing Path count = 3
@@ -60,7 +60,7 @@ INFO: -sdc option: sdc file input not used
 INFO: -lpf option: output file option is OFF
 INFO: hardtimer checking is enabled (default); -dt option not used
 INFO: -r option is OFF [ Remove LOC Properties is OFF ]
--- Technology check ok...MachXO, MachXO2...
+INFO: The default vhdl library search path is now "C:/lscc/diamond/2.1_x64/cae_library/vhdl_packages/vdbs" (VHDL-1504)
 INFO: * compile design *
 INFO: Compile Design Begin
 c:/users/octalbyte/documents/github/eece444-video-card/top.v(9): INFO: compiling module Top (VERI-1018)
@@ -78,16 +78,15 @@ INFO: All blocks are expanded and NGD expansion is successful
 INFO: Writing ngd file eece444_video_card_eece444_video_card.ngd
 
 ################### Begin Area Report (Top)######################
-Number of register bits => 31 of 2280 (1 % )
-CCU2 => 16
-FD1S3IX => 31
+Number of register bits => 29 of 2280 (1 % )
+CCU2 => 15
+FD1S3IX => 29
 GSR => 1
 IB => 1
 OB => 2
 OBZ => 1
-ORCALUT4 => 40
+ORCALUT4 => 24
 OSCC => 1
-PFUMX => 1
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -97,21 +96,21 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : osc_clk, loads : 31
+  Net : osc_clk, loads : 29
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n60, loads : 20
-  Net : n20_adj_4, loads : 11
-  Net : v_counter_14, loads : 6
-  Net : v_counter_6, loads : 5
-  Net : v_counter_11, loads : 5
-  Net : v_counter_19, loads : 5
-  Net : v_counter_8, loads : 5
-  Net : v_counter_13, loads : 5
-  Net : v_counter_7, loads : 5
-  Net : h_counter_7, loads : 5
+  Net : n51, loads : 19
+  Net : n14, loads : 10
+  Net : h_counter_7, loads : 6
+  Net : h_counter_4, loads : 5
+  Net : h_counter_5, loads : 4
+  Net : h_counter_6, loads : 4
+  Net : h_counter_8, loads : 4
+  Net : h_counter_9, loads : 4
+  Net : h_counter_0, loads : 4
+  Net : v_counter_6, loads : 3
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -121,7 +120,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets osc_clk]                 |  200.000 MHz|  116.604 MHz|     7 *
+clk0 [get_nets osc_clk]                 |  200.000 MHz|  178.476 MHz|     4 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -129,8 +128,8 @@ clk0 [get_nets osc_clk]                 |  200.000 MHz|  116.604 MHz|     7 *
 1 constraints not met.
 
 
-Peak Memory Usage: 55.344  MB
+Peak Memory Usage: 55.531  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.266  secs
+Elapsed CPU time for LSE flow : 1.922  secs
 --------------------------------------------------------------

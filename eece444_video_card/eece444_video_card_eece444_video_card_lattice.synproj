@@ -25,7 +25,6 @@
 -p "C:/Users/OctalByte/Documents/GitHub/eece444-video-card"
 -ver "C:/Users/OctalByte/Documents/GitHub/eece444-video-card/Top.v"
 "C:/Users/OctalByte/Documents/GitHub/eece444-video-card/Controller.v"
--top Top
 
 
 -p "C:/lscc/diamond/2.1_x64/ispfpga/mj5g00/data" "C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card" "C:/Users/OctalByte/Documents/GitHub/eece444-video-card"
