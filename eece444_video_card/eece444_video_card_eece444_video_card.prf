@@ -1,10 +1,10 @@
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 2.1.0.103 -- WARNING: Map write only section -- Wed Apr 10 22:33:27 2013
+# map:  version Diamond (64-bit) 2.1.0.103 -- WARNING: Map write only section -- Thu Apr 11 15:28:38 2013
 
 SYSCONFIG INBUF=ON CONFIG_SECURE=OFF ;
+LOCATE COMP "RED" SITE "E5" ;
 LOCATE COMP "V_SYNC" SITE "H2" ;
 LOCATE COMP "H_SYNC" SITE "E4" ;
-LOCATE COMP "RED" SITE "E5" ;
 LOCATE COMP "RESET" SITE "G2" ;
 FREQUENCY NET "osc_clk" 25.175000 MHz ;
 SCHEMATIC END ;

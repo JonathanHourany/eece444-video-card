@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Apr 10 22:33:26 2013
+Thu Apr 11 15:28:37 2013
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,100 +19,124 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 5.000000 -name clk0 [get_nets osc_clk]
-            536 items scored, 194 timing errors detected.
+            610 items scored, 326 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 0.603ns
+Error:  The following path violates requirements by 4.269ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \CNTRL/v_counter_15__i18  (from OSCC_1 +)
-   Destination:    FD1S3IX    CD             \CNTRL/v_counter_15__i0  (to OSCC_1 +)
+   Source:         FD1S3IX    CK             \CNTRL/v_counter_25__i18  (from OSCC_1 +)
+   Destination:    FD1S3IX    D              x_counter_23__i7  (to OSCC_1 +)
 
-   Delay:                   5.421ns  (32.9% logic, 67.1% route), 4 logic levels.
+   Delay:                   9.087ns  (36.8% logic, 63.2% route), 8 logic levels.
 
  Constraint Details:
 
-      5.421ns data_path \CNTRL/v_counter_15__i18 to \CNTRL/v_counter_15__i0 violates
+      9.087ns data_path \CNTRL/v_counter_25__i18 to x_counter_23__i7 violates
       5.000ns delay constraint less
-      0.182ns L_S requirement (totaling 4.818ns) by 0.603ns
+      0.182ns L_S requirement (totaling 4.818ns) by 4.269ns
 
- Path Details: \CNTRL/v_counter_15__i18 to \CNTRL/v_counter_15__i0
+ Path Details: \CNTRL/v_counter_25__i18 to x_counter_23__i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.613             CK to Q              \CNTRL/v_counter_15__i18 (from OSCC_1)
+L_CO        ---     0.613             CK to Q              \CNTRL/v_counter_25__i18 (from OSCC_1)
 Route         2   e 0.906                                  \CNTRL/v_counter[18]
-LUT4        ---     0.390              A to Z              \CNTRL/i7_4_lut
-Route         1   e 0.620                                  \CNTRL/n17
-LUT4        ---     0.390              A to Z              \CNTRL/i9_4_lut
-Route         2   e 0.786                                  \CNTRL/n165
-LUT4        ---     0.390              B to Z              \CNTRL/i2_4_lut_adj_1
-Route        19   e 1.326                                  \CNTRL/n51
+LUT4        ---     0.390              A to Z              \CNTRL/i5_3_lut
+Route         1   e 0.620                                  \CNTRL/n14
+LUT4        ---     0.390              C to Z              \CNTRL/i8_4_lut
+Route         2   e 0.786                                  \CNTRL/n673
+LUT4        ---     0.390              B to Z              \CNTRL/i1_2_lut_adj_5
+Route         2   e 0.786                                  \CNTRL/n328
+LUT4        ---     0.390              B to Z              \CNTRL/i3_4_lut_adj_6
+Route         2   e 0.786                                  V_SYNC_c
+LUT4        ---     0.390              B to Z              \CNTRL/i1_4_lut
+Route         1   e 0.620                                  \CNTRL/n5
+LUT4        ---     0.390              A to Z              \CNTRL/i3_4_lut
+Route         1   e 0.620                                  v_display
+A1_TO_F     ---     0.390           B[4] to S[2]           x_counter_23_add_4_2
+Route         1   e 0.620                                  n50
                   --------
-                    5.421  (32.9% logic, 67.1% route), 4 logic levels.
+                    9.087  (36.8% logic, 63.2% route), 8 logic levels.
 
 
-Error:  The following path violates requirements by 0.603ns
+Error:  The following path violates requirements by 4.269ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \CNTRL/v_counter_15__i18  (from OSCC_1 +)
-   Destination:    FD1S3IX    CD             \CNTRL/v_counter_15__i18  (to OSCC_1 +)
+   Source:         FD1S3IX    CK             \CNTRL/v_counter_25__i18  (from OSCC_1 +)
+   Destination:    FD1S3IX    D              x_counter_23__i8  (to OSCC_1 +)
 
-   Delay:                   5.421ns  (32.9% logic, 67.1% route), 4 logic levels.
+   Delay:                   9.087ns  (36.8% logic, 63.2% route), 8 logic levels.
 
  Constraint Details:
 
-      5.421ns data_path \CNTRL/v_counter_15__i18 to \CNTRL/v_counter_15__i18 violates
+      9.087ns data_path \CNTRL/v_counter_25__i18 to x_counter_23__i8 violates
       5.000ns delay constraint less
-      0.182ns L_S requirement (totaling 4.818ns) by 0.603ns
+      0.182ns L_S requirement (totaling 4.818ns) by 4.269ns
 
- Path Details: \CNTRL/v_counter_15__i18 to \CNTRL/v_counter_15__i18
+ Path Details: \CNTRL/v_counter_25__i18 to x_counter_23__i8
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.613             CK to Q              \CNTRL/v_counter_15__i18 (from OSCC_1)
+L_CO        ---     0.613             CK to Q              \CNTRL/v_counter_25__i18 (from OSCC_1)
 Route         2   e 0.906                                  \CNTRL/v_counter[18]
-LUT4        ---     0.390              A to Z              \CNTRL/i7_4_lut
-Route         1   e 0.620                                  \CNTRL/n17
-LUT4        ---     0.390              A to Z              \CNTRL/i9_4_lut
-Route         2   e 0.786                                  \CNTRL/n165
-LUT4        ---     0.390              B to Z              \CNTRL/i2_4_lut_adj_1
-Route        19   e 1.326                                  \CNTRL/n51
+LUT4        ---     0.390              A to Z              \CNTRL/i5_3_lut
+Route         1   e 0.620                                  \CNTRL/n14
+LUT4        ---     0.390              C to Z              \CNTRL/i8_4_lut
+Route         2   e 0.786                                  \CNTRL/n673
+LUT4        ---     0.390              B to Z              \CNTRL/i1_2_lut_adj_5
+Route         2   e 0.786                                  \CNTRL/n328
+LUT4        ---     0.390              B to Z              \CNTRL/i3_4_lut_adj_6
+Route         2   e 0.786                                  V_SYNC_c
+LUT4        ---     0.390              B to Z              \CNTRL/i1_4_lut
+Route         1   e 0.620                                  \CNTRL/n5
+LUT4        ---     0.390              A to Z              \CNTRL/i3_4_lut
+Route         1   e 0.620                                  v_display
+A1_TO_F     ---     0.390           B[4] to S[2]           x_counter_23_add_4_2
+Route         1   e 0.620                                  n51
                   --------
-                    5.421  (32.9% logic, 67.1% route), 4 logic levels.
+                    9.087  (36.8% logic, 63.2% route), 8 logic levels.
 
 
-Error:  The following path violates requirements by 0.603ns
+Error:  The following path violates requirements by 4.269ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \CNTRL/v_counter_15__i18  (from OSCC_1 +)
-   Destination:    FD1S3IX    CD             \CNTRL/v_counter_15__i17  (to OSCC_1 +)
+   Source:         FD1S3IX    CK             \CNTRL/v_counter_25__i17  (from OSCC_1 +)
+   Destination:    FD1S3IX    D              x_counter_23__i7  (to OSCC_1 +)
 
-   Delay:                   5.421ns  (32.9% logic, 67.1% route), 4 logic levels.
+   Delay:                   9.087ns  (36.8% logic, 63.2% route), 8 logic levels.
 
  Constraint Details:
 
-      5.421ns data_path \CNTRL/v_counter_15__i18 to \CNTRL/v_counter_15__i17 violates
+      9.087ns data_path \CNTRL/v_counter_25__i17 to x_counter_23__i7 violates
       5.000ns delay constraint less
-      0.182ns L_S requirement (totaling 4.818ns) by 0.603ns
+      0.182ns L_S requirement (totaling 4.818ns) by 4.269ns
 
- Path Details: \CNTRL/v_counter_15__i18 to \CNTRL/v_counter_15__i17
+ Path Details: \CNTRL/v_counter_25__i17 to x_counter_23__i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.613             CK to Q              \CNTRL/v_counter_15__i18 (from OSCC_1)
-Route         2   e 0.906                                  \CNTRL/v_counter[18]
-LUT4        ---     0.390              A to Z              \CNTRL/i7_4_lut
-Route         1   e 0.620                                  \CNTRL/n17
-LUT4        ---     0.390              A to Z              \CNTRL/i9_4_lut
-Route         2   e 0.786                                  \CNTRL/n165
-LUT4        ---     0.390              B to Z              \CNTRL/i2_4_lut_adj_1
-Route        19   e 1.326                                  \CNTRL/n51
+L_CO        ---     0.613             CK to Q              \CNTRL/v_counter_25__i17 (from OSCC_1)
+Route         2   e 0.906                                  \CNTRL/v_counter[17]
+LUT4        ---     0.390              B to Z              \CNTRL/i5_3_lut
+Route         1   e 0.620                                  \CNTRL/n14
+LUT4        ---     0.390              C to Z              \CNTRL/i8_4_lut
+Route         2   e 0.786                                  \CNTRL/n673
+LUT4        ---     0.390              B to Z              \CNTRL/i1_2_lut_adj_5
+Route         2   e 0.786                                  \CNTRL/n328
+LUT4        ---     0.390              B to Z              \CNTRL/i3_4_lut_adj_6
+Route         2   e 0.786                                  V_SYNC_c
+LUT4        ---     0.390              B to Z              \CNTRL/i1_4_lut
+Route         1   e 0.620                                  \CNTRL/n5
+LUT4        ---     0.390              A to Z              \CNTRL/i3_4_lut
+Route         1   e 0.620                                  v_display
+A1_TO_F     ---     0.390           B[4] to S[2]           x_counter_23_add_4_2
+Route         1   e 0.620                                  n50
                   --------
-                    5.421  (32.9% logic, 67.1% route), 4 logic levels.
+                    9.087  (36.8% logic, 63.2% route), 8 logic levels.
 
-Warning: 5.603 ns is the maximum delay for this constraint.
+Warning: 9.269 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -122,7 +146,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets osc_clk]                 |     5.000 ns|     5.603 ns|     4 *
+clk0 [get_nets osc_clk]                 |     5.000 ns|     9.269 ns|     8 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -132,17 +156,35 @@ clk0 [get_nets osc_clk]                 |     5.000 ns|     5.603 ns|     4 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\CNTRL/n51                              |      19|     190|     97.94%
+\CNTRL/n55                              |      19|     190|     58.28%
                                         |        |        |
-\CNTRL/n165                             |       2|     152|     78.35%
+\CNTRL/n673                             |       2|     169|     51.84%
                                         |        |        |
-\CNTRL/n16                              |       1|      76|     39.18%
+\CNTRL/n15                              |       1|      92|     28.22%
                                         |        |        |
-\CNTRL/n17                              |       1|      76|     39.18%
+\CNTRL/n14                              |       1|      69|     21.17%
                                         |        |        |
-\CNTRL/n10_adj_4                        |       1|      38|     19.59%
+v_display                               |       1|      66|     20.25%
                                         |        |        |
-\CNTRL/n16_adj_1                        |       1|      38|     19.59%
+\CNTRL/n752                             |       2|      63|     19.33%
+                                        |        |        |
+\CNTRL/n683                             |       1|      57|     17.48%
+                                        |        |        |
+\CNTRL/n45                              |       2|      54|     16.56%
+                                        |        |        |
+\CNTRL/n18                              |      10|      50|     15.34%
+                                        |        |        |
+\CNTRL/n635                             |       1|      50|     15.34%
+                                        |        |        |
+\CNTRL/n5                               |       1|      48|     14.72%
+                                        |        |        |
+n50                                     |       1|      41|     12.58%
+                                        |        |        |
+n51                                     |       1|      41|     12.58%
+                                        |        |        |
+\CNTRL/n328                             |       2|      38|     11.66%
+                                        |        |        |
+V_SYNC_c                                |       2|      36|     11.04%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -150,10 +192,10 @@ Critical Nets                           |   Loads|  Errors| % of total
 Timing summary:
 ---------------
 
-Timing errors: 194  Score: 112588
+Timing errors: 326  Score: 351898
 
-Constraints cover  536 paths, 74 nets, and 167 connections (82.7% coverage)
+Constraints cover  610 paths, 101 nets, and 234 connections (88.3% coverage)
 
 
-Peak memory: 58138624 bytes, TRCE: 1921024 bytes, DLYMAN: 0 bytes
+Peak memory: 58650624 bytes, TRCE: 1630208 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

@@ -19,9 +19,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card/eece444_video_card_eece444_video_card.jed</File>
-			<FileTime>04/05/13 19:21:51</FileTime>
-			<JedecChecksum>0x8C82</JedecChecksum>
+			<File>C:/Users/fox/programming/eece444-video-card/eece444_video_card/eece444_video_card_eece444_video_card.jed</File>
+			<FileTime>04/11/13 13:11:53</FileTime>
+			<JedecChecksum>0xE425</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
