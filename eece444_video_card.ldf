@@ -2,7 +2,7 @@
 <BaliProject version="2.0" title="eece444_video_card" device="LCMXO2280C-3FT256C" synthesis="lse" default_implementation="eece444_video_card">
     <Options/>
     <Implementation title="eece444_video_card" dir="eece444_video_card" description="eece444_video_card" default_strategy="Strategy1">
-        <Options def_top="Top"/>
+        <Options/>
         <Source name="CtrlLines.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
