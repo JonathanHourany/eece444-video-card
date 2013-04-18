@@ -1,0 +1,47 @@
+|Top
+CLOCK_50 => clock_25.CLK
+RESET => RESET.IN1
+H_SYNC <= Controller:CNTRL.H_SYNC
+V_SYNC <= Controller:CNTRL.V_SYNC
+RED <= RED.DB_MAX_OUTPUT_PORT_TYPE
+BLUE <= BLUE.DB_MAX_OUTPUT_PORT_TYPE
+GREEN <= GREEN.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Controller:CNTRL
+CLK => v_counter[0].CLK
+CLK => v_counter[1].CLK
+CLK => v_counter[2].CLK
+CLK => v_counter[3].CLK
+CLK => v_counter[4].CLK
+CLK => v_counter[5].CLK
+CLK => v_counter[6].CLK
+CLK => v_counter[7].CLK
+CLK => v_counter[8].CLK
+CLK => v_counter[9].CLK
+CLK => v_counter[10].CLK
+CLK => v_counter[11].CLK
+CLK => v_counter[12].CLK
+CLK => v_counter[13].CLK
+CLK => v_counter[14].CLK
+CLK => v_counter[15].CLK
+CLK => v_counter[16].CLK
+CLK => v_counter[17].CLK
+CLK => v_counter[18].CLK
+CLK => h_counter[0].CLK
+CLK => h_counter[1].CLK
+CLK => h_counter[2].CLK
+CLK => h_counter[3].CLK
+CLK => h_counter[4].CLK
+CLK => h_counter[5].CLK
+CLK => h_counter[6].CLK
+CLK => h_counter[7].CLK
+CLK => h_counter[8].CLK
+CLK => h_counter[9].CLK
+NRST => always3.IN1
+NRST => always2.IN1
+H_SYNC <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+V_SYNC <= LessThan3.DB_MAX_OUTPUT_PORT_TYPE
+RGB_EN <= RGB_EN.DB_MAX_OUTPUT_PORT_TYPE
+
+

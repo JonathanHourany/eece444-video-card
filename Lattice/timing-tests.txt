@@ -1,0 +1,56 @@
+Author:  Jon Hourany
+Project: EECE 444 Project
+
+This document concerns data for a varity of tests done on the Lattic MachXO 22800C and its abilities and limitation in creating a stable VGA signal.
+
+=================================
+Date: 			4/11/2013
+Monitor:		Princeton
+Resolution Attempt: 	640x350 @ 70Hz
+Actual Resolution: 	640x400 @ 59Hz
+Timings:    
+    `define H_SYNC_PULSE        10'd96
+    `define H_BACK_PORCH_END    10'd144
+    `define H_FRONT_PORCH_STRT  10'd784
+    `define H_COUNT_MAX         10'd799
+	
+    `define V_SYNC_PULSE        19'd2
+    `define V_BACK_PORCH_END    19'd35
+    `define V_FRONT_PORCH_STRT  19'd515
+    `define V_COUNT_MAX         19'd448
+
+Misc: Screen flickers very quickly as if refresh rate is too slow. Screen tearing is aparent on left border.
+=================================
+Date: 			4/11/2013
+Monitor:		Princeton
+Resolution Attempt: 	640x480 @ 60Hz
+Actual Resolution: 	640x480 @ 55Hz
+Timings:    
+    `define H_SYNC_PULSE        10'd96
+    `define H_BACK_PORCH_END    10'd144
+    `define H_FRONT_PORCH_STRT  10'd784
+    `define H_COUNT_MAX         10'd769
+	
+    `define V_SYNC_PULSE        19'd2
+    `define V_BACK_PORCH_END    19'd35
+    `define V_FRONT_PORCH_STRT  19'd515
+    `define V_COUNT_MAX         19'd500
+
+Misc: Screen flickering is very light, brief. No screen tearing is appearent. Monitor alerted to auto-tuning.
+=================================
+Date: 			4/11/2013
+Monitor:		Princeton
+Resolution Attempt: 	640x480 @ 60Hz
+Actual Resolution: 	640x480 @ 55Hz
+Timings:    
+    `define H_SYNC_PULSE        10'd96
+    `define H_BACK_PORCH_END    10'd144
+    `define H_FRONT_PORCH_STRT  10'd784
+    `define H_COUNT_MAX         10'd769
+	
+    `define V_SYNC_PULSE        19'd2
+    `define V_BACK_PORCH_END    19'd35
+    `define V_FRONT_PORCH_STRT  19'd515
+    `define V_COUNT_MAX         19'd500
+
+Misc: Screen flickering is very light, brief. No screen tearing is appearent. Monitor alerted to auto-tuning.

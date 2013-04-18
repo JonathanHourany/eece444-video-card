@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:\Modeltech_pe_edu_10.2a\examples
+!i10d 8192
+!i10e 25
+!i10f 100
+vController
+Z1 !s100 kW<:QcX33a5GmeBAe4cn53
+Z2 IeWToP:kdYhcCMEVZ01?WS3
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 dC:\Users\fox\programming\de0-video-card\test-bench
+Z5 w1366165260
+Z6 8C:/Users/fox/programming/eece444-video-card/Controller.v
+Z7 FC:/Users/fox/programming/eece444-video-card/Controller.v
+L0 12
+Z8 OP;L;10.2a;57
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/fox/programming/eece444-video-card/Controller.v|
+Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
+Z11 n@controller
+Z12 !s110 1366166841
+!i10b 1
+!s85 0
+Z13 !s108 1366166841.367000
+Z14 !s107 C:/Users/fox/programming/eece444-video-card/Controller.v|
+!s101 -O0
+vTop
+!s110 1366166842
+!i10b 1
+!s100 ?J8@R2KV9RBz0jX@a`2E61
+I0?SA@b7ZU=@;6z?f>^B3k1
+R3
+R4
+w1366166842
+Z15 8C:/Users/fox/programming/eece444-video-card/Top.v
+Z16 FC:/Users/fox/programming/eece444-video-card/Top.v
+L0 9
+R8
+r1
+!s85 0
+31
+!s108 1366166842.473000
+!s107 C:/Users/fox/programming/eece444-video-card/Top.v|
+Z17 !s90 -reportprogress|300|-work|work|C:/Users/fox/programming/eece444-video-card/Top.v|
+!s101 -O0
+R10
+n@top
