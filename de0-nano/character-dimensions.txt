@@ -1,0 +1,11 @@
+Character Dimensions:
+The DE0-Nano has 22,300 LE's. In order to fit the whole design on the board the characters must be constranted to a size limit.
+
+Resolution: 640x480
+Char Width: 10
+Char Hight: 16
+
+640/10 = 64 Chars/Row
+480/16 = 30 Rows
+64x30 = 1920 Chars/Frame
+1920x8 (bytes) = 15360 Registers | LE's
