@@ -1,1 +1,1 @@
-de0-video-card/SOURCE
+de0-video-card/FIT
