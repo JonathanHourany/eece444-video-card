@@ -5,13 +5,13 @@ module FontRom(CLK, CHAR_IN, ROW_NUM, DATA_OUT);
    output   reg   [0:9]  DATA_OUT;
    
    parameter   char       = 2'h48;
-   parameter   font_value = 40'h000008120481204813FC81204812048120400000;
+   parameter   font_value = 160'h000000004210842100000000;
    
-   reg [0:159] char_font  = font_value;
+   reg [159:0] char_font  = font_value;
    
    always @(negedge CLK)
       if (CHAR_IN == char) begin
-         DATA_OUT = char_font[2*ROW_NUM+:10];
+         DATA_OUT = font_value[10*ROW_NUM+:10];
       end
       else begin
          DATA_OUT = 8'bZZ;

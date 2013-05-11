@@ -1,6 +1,6 @@
 Analysis & Synthesis report for de0-video-card
-Thu May 02 15:04:05 2013
-Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Fri May 10 21:40:55 2013
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -15,9 +15,10 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+ 10. Port Connectivity Checks: "Controller:CNTRL"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,15 +44,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 02 15:04:05 2013    ;
-; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri May 10 21:40:55 2013    ;
+; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; de0-video-card                           ;
 ; Top-level Entity Name              ; Top                                      ;
 ; Family                             ; Cyclone IV E                             ;
-; Total logic elements               ; 97                                       ;
-;     Total combinational functions  ; 97                                       ;
-;     Dedicated logic registers      ; 40                                       ;
-; Total registers                    ; 40                                       ;
+; Total logic elements               ; 75                                       ;
+;     Total combinational functions  ; 75                                       ;
+;     Dedicated logic registers      ; 31                                       ;
+; Total registers                    ; 31                                       ;
 ; Total pins                         ; 7                                        ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
@@ -173,27 +174,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 97    ;
+; Estimated Total logic elements              ; 75    ;
 ;                                             ;       ;
-; Total combinational functions               ; 97    ;
+; Total combinational functions               ; 75    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 32    ;
-;     -- 3 input functions                    ; 19    ;
-;     -- <=2 input functions                  ; 46    ;
+;     -- 4 input functions                    ; 31    ;
+;     -- 3 input functions                    ; 10    ;
+;     -- <=2 input functions                  ; 34    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 61    ;
-;     -- arithmetic mode                      ; 36    ;
+;     -- normal mode                          ; 48    ;
+;     -- arithmetic mode                      ; 27    ;
 ;                                             ;       ;
-; Total registers                             ; 40    ;
-;     -- Dedicated logic registers            ; 40    ;
+; Total registers                             ; 31    ;
+;     -- Dedicated logic registers            ; 31    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 7     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 40    ;
-; Total fan-out                               ; 389   ;
-; Average fan-out                             ; 2.58  ;
+; Maximum fan-out                             ; 31    ;
+; Total fan-out                               ; 316   ;
+; Average fan-out                             ; 2.63  ;
 +---------------------------------------------+-------+
 
 
@@ -202,8 +203,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; |Top                       ; 97 (28)           ; 40 (11)      ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |Top                  ;              ;
-;    |Controller:CNTRL|      ; 69 (69)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Controller:CNTRL ;              ;
+; |Top                       ; 75 (11)           ; 31 (1)       ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |Top                  ;              ;
+;    |Controller:CNTRL|      ; 64 (64)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Controller:CNTRL ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -213,7 +214,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 40    ;
+; Total registers                              ; 31    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -223,14 +224,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |Top|Controller:CNTRL|v_counter[18] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|x_counter[9]                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|v_counter[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Controller:CNTRL"                                                                                            ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; ROW_NUM  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; H_STATUS ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; V_STATUS ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -238,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -246,40 +257,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Thu May 02 15:04:00 2013
+    Info: Processing started: Fri May 10 21:40:53 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0-video-card -c de0-video-card
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (10229): Verilog HDL Expression warning at Top.v(42): truncated literal to match 2 bits
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: Top
 Info (12021): Found 1 design units, including 1 entities, in source file controller.v
     Info (12023): Found entity 1: Controller
 Warning (10229): Verilog HDL Expression warning at FontRom.v(7): truncated literal to match 2 bits
-Warning (10229): Verilog HDL Expression warning at FontRom.v(8): truncated literal to match 40 bits
 Info (12021): Found 1 design units, including 1 entities, in source file fontrom.v
     Info (12023): Found entity 1: FontRom
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Top.v(43): truncated value with size 32 to match size of target (10)
+Warning (10036): Verilog HDL or VHDL warning at Top.v(19): object "string_h" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at Top.v(46): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at Top.v(47): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at Top.v(48): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Top.v(49): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "Controller" for hierarchy "Controller:CNTRL"
-Warning (10230): Verilog HDL assignment warning at Controller.v(74): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at Controller.v(83): truncated value with size 32 to match size of target (19)
+Warning (10230): Verilog HDL assignment warning at Controller.v(103): truncated value with size 32 to match size of target (10)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/fox/programming/eece444-video-card/de0-nano/output_files/de0-video-card.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 97 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 419 megabytes
-    Info: Processing ended: Thu May 02 15:04:05 2013
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 75 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 345 megabytes
+    Info: Processing ended: Fri May 10 21:40:55 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+

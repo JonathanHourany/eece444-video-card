@@ -1,0 +1,78 @@
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do de0-video-card_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/fox/programming/eece444-video-card/de0-nano {C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Top
+# ** Warning: C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(42): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	Top
+# vlog -vlog01compat -work work +incdir+C:/Users/fox/programming/eece444-video-card/de0-nano {C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# 
+vsim work.Top
+# vsim work.Top 
+# Loading work.Top
+# Loading work.Controller
+# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /Top/CNTRL
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
+# 
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
+# 
+# Load canceled
+run
+# Break key hit 
+vsim work.Top
+# vsim work.Top 
+# Loading work.Top
+# Loading work.Controller
+# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /Top/CNTRL
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
+# 
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
+# 
+run
+add wave sim:/Top/*
+restart
+# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /Top/CNTRL
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
+# 
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
+# 
+# Load canceled
+run
+add wave -position end  sim:/Top/CNTRL/h_counter
+add wave -position end  sim:/Top/CNTRL/v_counter
+run
+restart
+# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /Top/CNTRL
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
+# 
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
+# 
+run
+run -continue
+run

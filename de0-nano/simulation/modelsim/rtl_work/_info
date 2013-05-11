@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\fox\programming\eece444-video-card\de0-nano\simulation\modelsim
+vController
+!i10b 1
+!s100 C_me7PDdmA>3hCUS^n>E^3
+I8D0A>zYb;U>7BRF?`hA950
+V??feNjn_:zbU@0YnV>Ton3
+Z1 dC:\Users\fox\programming\eece444-video-card\de0-nano\simulation\modelsim
+w1368233215
+8C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v
+FC:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v
+L0 12
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1368243435.184000
+!s107 C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/fox/programming/eece444-video-card/de0-nano|C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/fox/programming/eece444-video-card/de0-nano -O0
+n@controller
+vTop
+IdQ?Wi4dhF:knhifWkAP<`3
+VBKDZ?i:jb9WI6Z5G>=[G_0
+R1
+w1368234429
+8C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v
+FC:/Users/fox/programming/eece444-video-card/de0-nano/Top.v
+L0 9
+R2
+r1
+31
+R3
+n@top
+!i10b 1
+!s100 nW>4T]>m111m0Z<goVloj1
+!s85 0
+!s108 1368243434.910000
+!s107 C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/fox/programming/eece444-video-card/de0-nano|C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v|
+!s101 -O0
+R4

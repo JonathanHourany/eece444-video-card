@@ -15,11 +15,12 @@ module Top(CLOCK_50, RESET, H_SYNC, V_SYNC, RED, BLUE, GREEN);
    output wire BLUE;
    output wire GREEN;
 	
-	`define	X_COUNT_MAX	640
-	
-	reg[9:0]	x_counter;
-	reg		clock_25;
-	wire 		rgb_en;
+	reg 	 	  clock_25;
+   reg  [7:0] string_h;
+   reg  [159:0] line_buffer;
+   wire [9:0] data_bus; 
+	wire [9:0] pixel_cntr;
+   wire [9:0] row_num;
 
 	/*** Test Bench Code ***/
 //	 reg reset;
@@ -30,23 +31,21 @@ module Top(CLOCK_50, RESET, H_SYNC, V_SYNC, RED, BLUE, GREEN);
 //	 end
 //	 
 //	 always #1 clock_25 = ~clock_25;
-	 
-	Controller CNTRL(.NRST(RESET), .CLK(clock_25), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC), .RGB_EN(rgb_en));
-	
-	always @(posedge CLOCK_50) clock_25 = ~clock_25;	/*< Divide the onboard clock in half >*/
+
+	Controller  CNTRL(.NRST(RESET), .CLK(clock_25), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC), 
+                     .PIXEL_CNTR(pixel_cntr), .ROW_NUM(row_num));
+   //FontRom     FNT_RM(.CLK(clock_25), .CHAR_IN(string_h), .ROW_NUM(row_num), .DATA_OUT(data_bus));
+   
+   always @(posedge CLOCK_50) clock_25 = ~clock_25;	/*< Divide the onboard clock in half >*/
 	
 	always @(posedge clock_25) begin
-		if (x_counter >= `X_COUNT_MAX || !rgb_en) begin
-			x_counter <= 9'b0;
-		end
-		else if (rgb_en) begin
-			x_counter <= x_counter + 1;
-		end
+         string_h  <= 2'h48;
+         //line_buffer[pixel_cntr] <= 
 	end
 	
-	assign RED     = (x_counter < 160 || x_counter > 400 && x_counter < 640                      ? 1:1'bz);
-   assign GREEN   = (x_counter > 80  && x_counter < 320 || x_counter > 480 && x_counter < 640   ? 1:1'bz);
-   assign BLUE    = (x_counter > 240 && x_counter < 640                                         ? 1:1'bz);
+   assign RED     = (pixel_cntr < 160 || pixel_cntr > 400 && pixel_cntr < 640                      ? 1:1'bz);
+   assign GREEN   = (pixel_cntr > 80  && pixel_cntr < 320 || pixel_cntr > 480 && pixel_cntr < 640  ? 1:1'bz);
+   assign BLUE    = (pixel_cntr > 240 && pixel_cntr < 640                                          ? 1:1'bz);
    
 
 endmodule 
