@@ -1,19 +1,47 @@
-module FontRom(CLK, CHAR_IN, ROW_NUM, DATA_OUT);
+/***********************************************************
+ * @author  Jon Hourany
+ * @date    4/04/13
+ * @class   EECE 444
+ *
+ * @file  Controller.v
+ * @proj  Video Card
+ *
+ * @long  
+ *   
+ ************************************************************/
+ module FontRom(CLK, RESET, CHAR_IN, ROW_NUM, DATA_OUT);
    input    wire  [7:0]  CHAR_IN;
    input    wire  [3:0]  ROW_NUM;
    input    wire         CLK;
-   output   reg   [0:9]  DATA_OUT;
+   input    wire         RESET;
+   output   reg   [9:0]  DATA_OUT;
    
-   parameter   char       = 2'h48;
-   parameter   font_value = 160'h000000004210842100000000;
+   parameter   char       = 8'h48;
+   parameter   font_value = 160'h4210842108421F842108421084200000;
+   //`define   font_value  128'hFFFFFFFFFFFFFFFF
+   reg [159:0] char_font;
    
-   reg [159:0] char_font  = font_value;
-   
-   always @(negedge CLK)
-      if (CHAR_IN == char) begin
-         DATA_OUT = font_value[10*ROW_NUM+:10];
+   always @(negedge CLK) begin
+      if (!RESET) begin
+         char_font <= font_value;
+      end
+      else if (CHAR_IN == char) begin
+         DATA_OUT = char_font[10*ROW_NUM+:10];
       end
       else begin
-         DATA_OUT = 8'bZZ;
+         DATA_OUT = 10'bZZ;
       end
+   end
+   
+//   always @(negedge CLK) begin
+//      if (CHAR_IN == 2'h48) begin
+//         DATA_OUT = char_font[10*ROW_NUM+:10];
+//      end
+//      else if (!RESET) begin
+//         char_font <= `font_value;
+//      end
+//      else begin
+//         DATA_OUT = 8'bZZ;
+//      end
+//   end
 endmodule

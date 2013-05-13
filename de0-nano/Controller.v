@@ -1,12 +1,12 @@
 /***********************************************************
  * @author  Jon Hourany
- * @date  4/04/13
- * @class  EECE 444
+ * @date    4/04/13
+ * @class   EECE 444
  *
- * @file  Controller.v
- * @proj  Video Card
+ * @file    Controller.v
+ * @proj    Video Card
  *
- * @long  Using the following timing for V_SYNC I can
+ * @long  
  *   
  ************************************************************/
 module Controller(CLK, NRST, H_SYNC, V_SYNC, H_STATUS, V_STATUS, PIXEL_CNTR, ROW_NUM);
@@ -100,8 +100,8 @@ module Controller(CLK, NRST, H_SYNC, V_SYNC, H_STATUS, V_STATUS, PIXEL_CNTR, ROW
        
        if (V_STATUS[2]) begin
           if (h_counter == `H_COUNT_MAX) begin
-             ROW_NUM <= ROW_NUM + 1;   /*< If V_SYNC is in display zone, increase >*/
-          end                          /*<   the ROW_NUM on every reset of H_SYNC >*/
+             ROW_NUM <= ROW_NUM + 1'b1;   /*< If V_SYNC is in display zone, increase >*/
+          end                             /*<   the ROW_NUM on every reset of H_SYNC >*/
        end
        else begin
           ROW_NUM <= 1'b0;

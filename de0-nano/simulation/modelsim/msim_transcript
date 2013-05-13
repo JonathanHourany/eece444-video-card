@@ -13,8 +13,6 @@
 # vlog -vlog01compat -work work +incdir+C:/Users/fox/programming/eece444-video-card/de0-nano {C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Top
-# ** Warning: C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(42): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
 # 
 # Top level modules:
 # 	Top
@@ -24,55 +22,169 @@
 # 
 # Top level modules:
 # 	Controller
+# vlog -vlog01compat -work work +incdir+C:/Users/fox/programming/eece444-video-card/de0-nano {C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FontRom
+# 
+# Top level modules:
+# 	FontRom
+# vlog -vlog01compat -work work +incdir+C:/Users/fox/programming/eece444-video-card/de0-nano {C:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module LineBuffer
+# 
+# Top level modules:
+# 	LineBuffer
 # 
 vsim work.Top
 # vsim work.Top 
 # Loading work.Top
 # Loading work.Controller
-# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# Loading work.FontRom
+# Loading work.LineBuffer
+# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(37): [TFMPC] - Too few port connections. Expected 8, found 6.
 # 
 #         Region: /Top/CNTRL
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(37): [TFMPC] - Missing connection for port 'H_STATUS'.
 # 
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
+# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(37): [TFMPC] - Missing connection for port 'V_STATUS'.
 # 
-# Load canceled
-run
-# Break key hit 
-vsim work.Top
-# vsim work.Top 
-# Loading work.Top
-# Loading work.Controller
-# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(43): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'CHAR_IN'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
 # 
-#         Region: /Top/CNTRL
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
+#         Region: /Top/FNT_H
+# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(43): [PCDPC] - Port size (4 or 4) does not match connection size (10) for port 'ROW_NUM'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
 # 
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
+#         Region: /Top/FNT_H
+# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(46): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'CHAR_IN'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
 # 
-run
+#         Region: /Top/FNT_E
+# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(46): [PCDPC] - Port size (4 or 4) does not match connection size (10) for port 'ROW_NUM'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
+# 
+#         Region: /Top/FNT_E
 add wave sim:/Top/*
-restart
-# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
-# 
-#         Region: /Top/CNTRL
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
-# 
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
-# 
-# Load canceled
+add wave -position end  sim:/Top/FNT_E/CHAR_IN
+add wave -position end  sim:/Top/FNT_E/DATA_OUT
+add wave -position end  sim:/Top/FNT_E/char_font
+add wave -position end  sim:/Top/FNT_H/CHAR_IN
+add wave -position end  sim:/Top/FNT_H/ROW_NUM
+add wave -position end  sim:/Top/FNT_H/DATA_OUT
+add wave -position end  sim:/Top/FNT_H/CHAR_IN
+force -freeze sim:/Top/clock_25 1 0, 0 {20 ps} -r 40
+noforce sim:/Top/RESET
+force -drive sim:/Top/RESET HiZ 0
 run
-add wave -position end  sim:/Top/CNTRL/h_counter
-add wave -position end  sim:/Top/CNTRL/v_counter
 run
-restart
-# ** Warning: (vsim-3017) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
-# 
-#         Region: /Top/CNTRL
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'H_STATUS'.
-# 
-# ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(36): [TFMPC] - Missing connection for port 'V_STATUS'.
-# 
 run
-run -continue
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -drive sim:/Top/RESET 0 0
+run
+force -drive sim:/Top/RESET St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave sim:/Top/LINE_BUFFER/*
+run
+run
+add wave -position 20  sim:/Top/FNT_H/char_font
 run

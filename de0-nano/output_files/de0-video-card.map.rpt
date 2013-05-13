@@ -1,6 +1,6 @@
 Analysis & Synthesis report for de0-video-card
-Fri May 10 21:40:55 2013
-Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Mon May 13 15:11:56 2013
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -13,12 +13,23 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "Controller:CNTRL"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_4i01:auto_generated
+ 15. Parameter Settings for User Entity Instance: FontRom:FNT_H
+ 16. Parameter Settings for User Entity Instance: FontRom:FNT_E
+ 17. Parameter Settings for Inferred Entity Instance: FontRom:FNT_H|altsyncram:Mux0_rtl_0
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "FontRom:FNT_E"
+ 20. Port Connectivity Checks: "FontRom:FNT_H"
+ 21. Port Connectivity Checks: "Controller:CNTRL"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,18 +55,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 10 21:40:55 2013    ;
-; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Mon May 13 15:11:56 2013    ;
+; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; de0-video-card                           ;
 ; Top-level Entity Name              ; Top                                      ;
 ; Family                             ; Cyclone IV E                             ;
-; Total logic elements               ; 75                                       ;
-;     Total combinational functions  ; 75                                       ;
-;     Dedicated logic registers      ; 31                                       ;
-; Total registers                    ; 31                                       ;
+; Total logic elements               ; 152                                      ;
+;     Total combinational functions  ; 123                                      ;
+;     Dedicated logic registers      ; 80                                       ;
+; Total registers                    ; 80                                       ;
 ; Total pins                         ; 7                                        ;
 ; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 0                                        ;
+; Total memory bits                  ; 2,560                                    ;
 ; Embedded Multiplier 9-bit elements ; 0                                        ;
 ; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
@@ -159,14 +170,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; Top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v        ;         ;
-; Controller.v                     ; yes             ; User Verilog HDL File  ; C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; Top.v                            ; yes             ; User Verilog HDL File        ; C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v                  ;         ;
+; Controller.v                     ; yes             ; User Verilog HDL File        ; C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v           ;         ;
+; FontRom.v                        ; yes             ; User Verilog HDL File        ; C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v              ;         ;
+; LineBuffer.v                     ; yes             ; User Verilog HDL File        ; C:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; aglobal121.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_4i01.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/fox/programming/eece444-video-card/de0-nano/db/altsyncram_4i01.tdf ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -174,39 +197,166 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 75    ;
+; Estimated Total logic elements              ; 152   ;
 ;                                             ;       ;
-; Total combinational functions               ; 75    ;
+; Total combinational functions               ; 123   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 31    ;
-;     -- 3 input functions                    ; 10    ;
-;     -- <=2 input functions                  ; 34    ;
+;     -- 4 input functions                    ; 68    ;
+;     -- 3 input functions                    ; 11    ;
+;     -- <=2 input functions                  ; 44    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 48    ;
-;     -- arithmetic mode                      ; 27    ;
+;     -- normal mode                          ; 93    ;
+;     -- arithmetic mode                      ; 30    ;
 ;                                             ;       ;
-; Total registers                             ; 31    ;
-;     -- Dedicated logic registers            ; 31    ;
+; Total registers                             ; 80    ;
+;     -- Dedicated logic registers            ; 80    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 7     ;
+; Total memory bits                           ; 2560  ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 31    ;
-; Total fan-out                               ; 316   ;
-; Average fan-out                             ; 2.63  ;
+; Maximum fan-out                             ; 100   ;
+; Total fan-out                               ; 814   ;
+; Average fan-out                             ; 3.43  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; |Top                       ; 75 (11)           ; 31 (1)       ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |Top                  ;              ;
-;    |Controller:CNTRL|      ; 64 (64)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Controller:CNTRL ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; |Top                                      ; 123 (33)          ; 80 (5)       ; 2560        ; 0            ; 0       ; 0         ; 7    ; 0            ; |Top                                                                    ;              ;
+;    |Controller:CNTRL|                     ; 68 (68)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Controller:CNTRL                                                   ;              ;
+;    |FontRom:FNT_E|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_E                                                      ;              ;
+;    |FontRom:FNT_H|                        ; 5 (5)             ; 0 (0)        ; 2560        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H                                                      ;              ;
+;       |altsyncram:Mux0_rtl_0|             ; 0 (0)             ; 0 (0)        ; 2560        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0                                ;              ;
+;          |altsyncram_4i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 2560        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_4i01:auto_generated ;              ;
+;    |LineBuffer:LINE_BUFFER|               ; 16 (16)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|LineBuffer:LINE_BUFFER                                             ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                             ;
++-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------+
+; Name                                                                          ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                         ;
++-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------+
+; FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_4i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 20           ; --           ; --           ; 2560 ; de0-video-card.Top0.rtl.mif ;
++-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++------------------------------------------+------------------------------------------+
+; Register name                            ; Reason for Removal                       ;
++------------------------------------------+------------------------------------------+
+; LineBuffer:LINE_BUFFER|DATA_OUT[40..639] ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[0..23]           ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[24..29]          ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[30..38]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[39]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[40..48]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[49]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[50..58]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[59]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[60..68]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[69]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[70..73]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[74..79]          ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[80..88]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[89]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[90..98]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[99]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[100..108]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[109]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[110..118]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[119]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[120..123]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[124..129]        ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_E|char_font[130..159]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[0..20]           ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[21]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[22..25]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[26]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[27..30]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[31]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[32..35]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[36]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[37..40]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[41]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[42..45]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[46]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[47..50]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[51]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[52..55]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[56]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[57..60]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[61]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[62..65]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[66]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[67..70]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[71..76]          ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[77..80]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[81]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[82..85]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[86]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[87..90]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[91]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[92..95]          ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[96]              ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[97..100]         ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[101]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[102..105]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[106]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[107..110]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[111]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[112..115]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[116]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[117..120]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[121]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[122..125]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[126]             ; Stuck at VCC due to stuck port data_in   ;
+; FontRom:FNT_H|char_font[127..159]        ; Stuck at GND due to stuck port data_in   ;
+; FontRom:FNT_H|DATA_OUT[0]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[1]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[2]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[3]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[4]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[5]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[6]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[7]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[8]~en             ; Lost fanout                              ;
+; FontRom:FNT_H|DATA_OUT[9]~en             ; Lost fanout                              ;
+; string_buff[2,11]                        ; Merged with string_buff[0]               ;
+; string_buff[1,4,5,7,9,13,15]             ; Merged with string_buff[12]              ;
+; string_buff[3,8]                         ; Merged with string_buff[10]              ;
+; string_buff[6]                           ; Merged with string_buff[14]              ;
+; FontRom:FNT_E|DATA_OUT[1]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[2]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[3]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[4]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[5]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[6]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[7]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[8]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; FontRom:FNT_E|DATA_OUT[9]~en             ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
+; string_buff[12]                          ; Stuck at GND due to stuck port data_in   ;
+; string_buff[14]                          ; Stuck at VCC due to stuck port data_in   ;
+; Controller:CNTRL|ROW_NUM[4..9]           ; Lost fanout                              ;
+; Total Number of Removed Registers = 959  ;                                          ;
++------------------------------------------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                               ;
++--------------------------------------+---------------------------+----------------------------------------+
+; Register name                        ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------------------------+---------------------------+----------------------------------------+
+; LineBuffer:LINE_BUFFER|DATA_OUT[639] ; Stuck at GND              ; LineBuffer:LINE_BUFFER|DATA_OUT[613]   ;
+;                                      ; due to stuck port data_in ;                                        ;
++--------------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -214,34 +364,201 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 31    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 80    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|v_counter[9] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
++------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                     ;
++--------------------------------+--------------------------+------+
+; Register Name                  ; Megafunction             ; Type ;
++--------------------------------+--------------------------+------+
+; FontRom:FNT_H|DATA_OUT[0]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[9]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[8]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[7]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[6]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[5]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[4]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[3]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[2]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_H|DATA_OUT[1]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[0]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[9]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[8]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[7]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[6]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[5]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[4]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[3]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[2]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_E|DATA_OUT[1]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
++--------------------------------+--------------------------+------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Controller:CNTRL"                                                                                            ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                  ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; ROW_NUM  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; H_STATUS ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; V_STATUS ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|v_counter[7]       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|ROW_NUM[4]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[12] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[24] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[31] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[3]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[18] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[29] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Source assignments for FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_4i01:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------+
+; Assignment                      ; Value              ; From ; To                          ;
++---------------------------------+--------------------+------+-----------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                           ;
++---------------------------------+--------------------+------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FontRom:FNT_H                                                                                                                                          ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Parameter Name ; Value                                                                                                                                                            ; Type            ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; char           ; 01001000                                                                                                                                                         ; Unsigned Binary ;
+; font_value     ; 0000000000000000000000000000000001000010000100001000010000100001000010000100001000011111100001000010000100001000010000100001000010000100001000000000000000000000 ; Unsigned Binary ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FontRom:FNT_E                                                                                                                                          ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Parameter Name ; Value                                                                                                                                                            ; Type            ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; char           ; 01000101                                                                                                                                                         ; Unsigned Binary ;
+; font_value     ; 0000000000000000000000000000001111110000100000000010000000001000000000100000000011111100001000000000100000000010000000001000000000111111000000000000000000000000 ; Unsigned Binary ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FontRom:FNT_H|altsyncram:Mux0_rtl_0 ;
++------------------------------------+-----------------------------+-------------------+
+; Parameter Name                     ; Value                       ; Type              ;
++------------------------------------+-----------------------------+-------------------+
+; BYTE_SIZE_BLOCK                    ; 8                           ; Untyped           ;
+; AUTO_CARRY_CHAINS                  ; ON                          ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                         ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS                ; ON                          ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                         ; IGNORE_CASCADE    ;
+; WIDTH_BYTEENA                      ; 1                           ; Untyped           ;
+; OPERATION_MODE                     ; ROM                         ; Untyped           ;
+; WIDTH_A                            ; 20                          ; Untyped           ;
+; WIDTHAD_A                          ; 7                           ; Untyped           ;
+; NUMWORDS_A                         ; 128                         ; Untyped           ;
+; OUTDATA_REG_A                      ; UNREGISTERED                ; Untyped           ;
+; ADDRESS_ACLR_A                     ; NONE                        ; Untyped           ;
+; OUTDATA_ACLR_A                     ; NONE                        ; Untyped           ;
+; WRCONTROL_ACLR_A                   ; NONE                        ; Untyped           ;
+; INDATA_ACLR_A                      ; NONE                        ; Untyped           ;
+; BYTEENA_ACLR_A                     ; NONE                        ; Untyped           ;
+; WIDTH_B                            ; 1                           ; Untyped           ;
+; WIDTHAD_B                          ; 1                           ; Untyped           ;
+; NUMWORDS_B                         ; 1                           ; Untyped           ;
+; INDATA_REG_B                       ; CLOCK1                      ; Untyped           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                      ; Untyped           ;
+; RDCONTROL_REG_B                    ; CLOCK1                      ; Untyped           ;
+; ADDRESS_REG_B                      ; CLOCK1                      ; Untyped           ;
+; OUTDATA_REG_B                      ; UNREGISTERED                ; Untyped           ;
+; BYTEENA_REG_B                      ; CLOCK1                      ; Untyped           ;
+; INDATA_ACLR_B                      ; NONE                        ; Untyped           ;
+; WRCONTROL_ACLR_B                   ; NONE                        ; Untyped           ;
+; ADDRESS_ACLR_B                     ; NONE                        ; Untyped           ;
+; OUTDATA_ACLR_B                     ; NONE                        ; Untyped           ;
+; RDCONTROL_ACLR_B                   ; NONE                        ; Untyped           ;
+; BYTEENA_ACLR_B                     ; NONE                        ; Untyped           ;
+; WIDTH_BYTEENA_A                    ; 1                           ; Untyped           ;
+; WIDTH_BYTEENA_B                    ; 1                           ; Untyped           ;
+; RAM_BLOCK_TYPE                     ; AUTO                        ; Untyped           ;
+; BYTE_SIZE                          ; 8                           ; Untyped           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                   ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ        ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ        ; Untyped           ;
+; INIT_FILE                          ; de0-video-card.Top0.rtl.mif ; Untyped           ;
+; INIT_FILE_LAYOUT                   ; PORT_A                      ; Untyped           ;
+; MAXIMUM_DEPTH                      ; 0                           ; Untyped           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                      ; Untyped           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                      ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                      ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                      ; Untyped           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN             ; Untyped           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN             ; Untyped           ;
+; ENABLE_ECC                         ; FALSE                       ; Untyped           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                       ; Untyped           ;
+; WIDTH_ECCSTATUS                    ; 3                           ; Untyped           ;
+; DEVICE_FAMILY                      ; Cyclone IV E                ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_4i01             ; Untyped           ;
++------------------------------------+-----------------------------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                ;
++-------------------------------------------+-------------------------------------+
+; Name                                      ; Value                               ;
++-------------------------------------------+-------------------------------------+
+; Number of entity instances                ; 1                                   ;
+; Entity Instance                           ; FontRom:FNT_H|altsyncram:Mux0_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                 ;
+;     -- WIDTH_A                            ; 20                                  ;
+;     -- NUMWORDS_A                         ; 128                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                        ;
+;     -- WIDTH_B                            ; 1                                   ;
+;     -- NUMWORDS_B                         ; 1                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                           ;
++-------------------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FontRom:FNT_E"                                                                                                                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CHAR_IN ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ROW_NUM ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FontRom:FNT_H"                                                                                                                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CHAR_IN ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ROW_NUM ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Controller:CNTRL"                                                                                                 ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; ROW_NUM[9..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; H_STATUS      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; V_STATUS      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -249,7 +566,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -257,40 +574,71 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Fri May 10 21:40:53 2013
+    Info: Processing started: Mon May 13 15:11:53 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0-video-card -c de0-video-card
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Warning (10229): Verilog HDL Expression warning at Top.v(42): truncated literal to match 2 bits
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: Top
 Info (12021): Found 1 design units, including 1 entities, in source file controller.v
     Info (12023): Found entity 1: Controller
-Warning (10229): Verilog HDL Expression warning at FontRom.v(7): truncated literal to match 2 bits
 Info (12021): Found 1 design units, including 1 entities, in source file fontrom.v
     Info (12023): Found entity 1: FontRom
+Info (12021): Found 1 design units, including 1 entities, in source file linebuffer.v
+    Info (12023): Found entity 1: LineBuffer
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Top.v(19): object "string_h" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at Top.v(46): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Top.v(47): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Top.v(48): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "Controller" for hierarchy "Controller:CNTRL"
-Warning (10230): Verilog HDL assignment warning at Controller.v(103): truncated value with size 32 to match size of target (10)
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_H"
+Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_E"
+Info (12128): Elaborating entity "LineBuffer" for hierarchy "LineBuffer:LINE_BUFFER"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "font_bus[9]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[8]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[7]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[6]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[5]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[4]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[3]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[2]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[1]" into a selector
+    Warning (13048): Converted tri-state node "font_bus[0]" into a selector
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276031): Inferred altsyncram megafunction from the following design logic: "FontRom:FNT_H|Mux0_rtl_0"
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 20
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter RAM_BLOCK_TYPE set to AUTO
+        Info (286033): Parameter INIT_FILE set to de0-video-card.Top0.rtl.mif
+Info (12130): Elaborated megafunction instantiation "FontRom:FNT_H|altsyncram:Mux0_rtl_0"
+Info (12133): Instantiated megafunction "FontRom:FNT_H|altsyncram:Mux0_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "20"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
+    Info (12134): Parameter "INIT_FILE" = "de0-video-card.Top0.rtl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4i01.tdf
+    Info (12023): Found entity 1: altsyncram_4i01
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/fox/programming/eece444-video-card/de0-nano/output_files/de0-video-card.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 189 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 75 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 345 megabytes
-    Info: Processing ended: Fri May 10 21:40:55 2013
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21061): Implemented 162 logic cells
+    Info (21064): Implemented 20 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 442 megabytes
+    Info: Processing ended: Mon May 13 15:11:56 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
