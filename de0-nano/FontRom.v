@@ -18,7 +18,7 @@
    
    parameter   char       = 8'h48;
    parameter   font_value = 160'h4210842108421F842108421084200000;
-   //`define   font_value  128'hFFFFFFFFFFFFFFFF
+   
    reg [159:0] char_font;
    
    always @(negedge CLK) begin

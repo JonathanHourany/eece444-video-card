@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="de0-video-card">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0" CBX_FILE_NAME="altsyncram_4i01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0" CBX_FILE_NAME="altsyncram_5i01.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

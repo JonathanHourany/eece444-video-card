@@ -188,3 +188,4 @@ run
 run
 add wave -position 20  sim:/Top/FNT_H/char_font
 run
+# WARNING: No extended dataflow license exists
