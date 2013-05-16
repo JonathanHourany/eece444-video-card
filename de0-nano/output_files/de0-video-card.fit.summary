@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed May 15 15:41:08 2013
-Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Thu May 16 14:13:30 2013
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : de0-video-card
 Top-level Entity Name : Top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 154 / 22,320 ( < 1 % )
-    Total combinational functions : 140 / 22,320 ( < 1 % )
-    Dedicated logic registers : 87 / 22,320 ( < 1 % )
-Total registers : 87
+Total logic elements : 236 / 22,320 ( 1 % )
+    Total combinational functions : 232 / 22,320 ( 1 % )
+    Dedicated logic registers : 112 / 22,320 ( < 1 % )
+Total registers : 112
 Total pins : 7 / 154 ( 5 % )
 Total virtual pins : 0
-Total memory bits : 3,840 / 608,256 ( < 1 % )
+Total memory bits : 6,400 / 608,256 ( 1 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

@@ -20,15 +20,15 @@ n@controller
 !i10b 1
 !s100 :]B_?;Mjk5=ekKk5`>2d>0
 !s85 0
-!s108 1368458038.076000
+!s108 1368675957.637000
 !s107 C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/fox/programming/eece444-video-card/de0-nano|C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v|
 !s101 -O0
 vFontRom
-I:_]CQ47P1_ii@@zz=:dV41
+IH=[T9[9eogf4QDFHKH2S[3
 V:8JBEf:T45z4n2Inz8;Cf3
 R1
-w1368446906
+w1368668358
 8C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v
 FC:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v
 L0 12
@@ -39,19 +39,19 @@ R3
 R4
 n@font@rom
 !i10b 1
-!s100 gL?8=`29SOkF7HiXOozUm1
+!s100 ZFC7dYANH:?VZm;?z<PdJ2
 !s85 0
-!s108 1368458038.150000
+!s108 1368675957.736000
 !s107 C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/fox/programming/eece444-video-card/de0-nano|C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v|
 !s101 -O0
 vLineBuffer
 !i10b 1
-!s100 873X@nX^1?MQeBAzA>g?>0
-IdoU0B9eHIQ[oce6NDJDUX1
-V]S7?fbkl^N182?kcK34Kl3
+!s100 LE[S:V_M_@OPHLnATg?l;1
+IiI9NF:0Cbl2;0IVB[C@QX3
+VFSjc24ZTIMkHLhODZ3D8_0
 R1
-w1368454455
+w1368483113
 8C:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v
 FC:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v
 L0 12
@@ -59,7 +59,7 @@ R2
 r1
 !s85 0
 31
-!s108 1368458038.392000
+!s108 1368675957.974000
 !s107 C:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/fox/programming/eece444-video-card/de0-nano|C:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v|
 !s101 -O0
@@ -67,10 +67,10 @@ R3
 R4
 n@line@buffer
 vTop
-IlLaKz=@fMm;HmYeF4SW[02
+IklJ1a3YNQ0n^2><zQG[b33
 VBKDZ?i:jb9WI6Z5G>=[G_0
 R1
-w1368454545
+w1368641872
 8C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v
 FC:/Users/fox/programming/eece444-video-card/de0-nano/Top.v
 L0 9
@@ -81,9 +81,9 @@ R3
 n@top
 R4
 !i10b 1
-!s100 MfDb1lhmWkgPMa^Pn6eCj2
+!s100 jICHc:edzg]fJVdK7U2X;2
 !s85 0
-!s108 1368458037.936000
+!s108 1368675957.319000
 !s107 C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/fox/programming/eece444-video-card/de0-nano|C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v|
 !s101 -O0

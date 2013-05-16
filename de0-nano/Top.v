@@ -15,9 +15,11 @@ module Top(CLOCK_50, RESET, H_SYNC, V_SYNC, RED, BLUE, GREEN);
    output wire BLUE;
    output wire GREEN;
 	
-	reg 	 	  clock_25;
-   reg  [31:0] string_buff;
-   reg  [1:0]char_num; 
+	`define MAX_BUF_LEN  48
+   
+   reg 	 	  clock_25;
+   reg  [47:0] string_buff;
+   reg  [2:0]char_num; 
    wire [0:639] line_buffer;
    wire [9:0] font_bus; 
 	wire [9:0] pixel_cntr;
@@ -33,25 +35,37 @@ module Top(CLOCK_50, RESET, H_SYNC, V_SYNC, RED, BLUE, GREEN);
 //	 
 //	 always #1 clock_25 = ~clock_25;
 
-	Controller  CNTRL(.NRST(RESET), .CLK(clock_25), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC), 
-                     .PIXEL_CNTR(pixel_cntr), .ROW_NUM(row_num));
-                     
-   defparam    FNT_H.font_value = 160'h4210842108421F842108421084200000;
-   defparam    FNT_H.char       = 8'h48;
-   
-   FontRom     FNT_H(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[31:24]), .ROW_NUM(row_num), 
-                      .DATA_OUT(font_bus));
-                      
    defparam    FNT_E.char       = 8'h45; 
-   defparam    FNT_E.font_value = 160'h3F08020080200FC20080200803F000000;       
+   defparam    FNT_E.font_value = 160'h3F08020080200FC20080200803F00000;
    
-   FontRom     FNT_E(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[31:24]), .ROW_NUM(row_num), 
-                      .DATA_OUT(font_bus));
+   defparam    FNT_H.char       = 8'h48;
+   defparam    FNT_H.font_value = 160'h4210842108421F842108421084200000;
    
    defparam    FNT_L.char       = 8'h4C;                   
-   defparam    FNT_L.font_value = 160'h20080200802008020080200803F000000;
+   defparam    FNT_L.font_value = 160'h20080200802008020080200803F00000;
+   
+   defparam    FNT_O.char       = 8'h4F; 
+   defparam    FNT_O.font_value = 160'h3F084210842108421084210843F00000;  
 
-   FontRom     FNT_L(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[31:24]), .ROW_NUM(row_num), 
+   defparam    FNT_W.char       = 8'h57; 
+   defparam    FNT_W.font_value = 160'h40902409024093254952330842100000;  
+	
+   Controller  CNTRL(.NRST(RESET), .CLK(clock_25), .H_SYNC(H_SYNC), .V_SYNC(V_SYNC), 
+                     .PIXEL_CNTR(pixel_cntr), .ROW_NUM(row_num));
+   
+   FontRom     FNT_H(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[`MAX_BUF_LEN-1:`MAX_BUF_LEN-8]), .ROW_NUM(row_num), 
+                      .DATA_OUT(font_bus));
+   
+   FontRom     FNT_E(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[`MAX_BUF_LEN-1:`MAX_BUF_LEN-8]), .ROW_NUM(row_num), 
+                      .DATA_OUT(font_bus));
+
+   FontRom     FNT_L(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[`MAX_BUF_LEN-1:`MAX_BUF_LEN-8]), .ROW_NUM(row_num), 
+                      .DATA_OUT(font_bus));
+   
+   FontRom     FNT_O(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[`MAX_BUF_LEN-1:`MAX_BUF_LEN-8]), .ROW_NUM(row_num), 
+                      .DATA_OUT(font_bus));
+                      
+   FontRom     FNT_W(.CLK(clock_25), .RESET(RESET), .CHAR_IN(string_buff[`MAX_BUF_LEN-1:`MAX_BUF_LEN-8]), .ROW_NUM(row_num), 
                       .DATA_OUT(font_bus));
                       
    LineBuffer  LINE_BUFFER(.CLK(clock_25), .RESET(RESET), .CHAR_NUM(char_num), 
@@ -61,11 +75,11 @@ module Top(CLOCK_50, RESET, H_SYNC, V_SYNC, RED, BLUE, GREEN);
 	
 	always @(posedge clock_25) begin
          if (!RESET || char_num == 3) begin
-            string_buff <= 32'h48454C4C;
+            string_buff <= 48'h48454C4C4F57;
             char_num    <= 1'b0;
          end
          else begin
-            string_buff <= {string_buff[23:0], string_buff[31:24]};
+            string_buff <= {string_buff[`MAX_BUF_LEN-9:0], string_buff[`MAX_BUF_LEN-1:`MAX_BUF_LEN-8]};
             char_num    <= char_num + 1'b1;
          end
 	end

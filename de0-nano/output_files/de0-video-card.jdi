@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="00000000000000000000"/>
+    <hash md5_digest_80b="4d4238a7f69c0ce19643"/>
   </project>
   <file_info>
-    <file checksum="0x0014D608" device="EP4CE22F17C6" path="de0-video-card.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE22F17C6" path="de0-video-card.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

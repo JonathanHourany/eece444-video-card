@@ -12,16 +12,16 @@
 module LineBuffer(CLK, RESET, CHAR_NUM, DATA_IN, DATA_OUT);
    input  wire         CLK;
    input  wire         RESET;
-   input  wire [1:0]   CHAR_NUM;
+   input  wire [2:0]   CHAR_NUM;
    input  wire [9:0]   DATA_IN;
    output reg  [0:639] DATA_OUT;
    
-   always @(negedge CLK) begin
+   always @(posedge CLK) begin
       if (!RESET) begin
          DATA_OUT <= 640'b00;
       end
       else begin
-         DATA_OUT[CHAR_NUM*10+:10] <= DATA_IN;
+         DATA_OUT[CHAR_NUM*10+:10] <= DATA_IN[9:0];
       end
    end
 endmodule

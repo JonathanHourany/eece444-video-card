@@ -1,6 +1,6 @@
 Analysis & Synthesis report for de0-video-card
-Wed May 15 15:40:16 2013
-Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+Thu May 16 14:13:21 2013
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -19,26 +19,30 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Editio
  11. General Register Statistics
  12. Registers Packed Into Inferred Megafunctions
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_5i01:auto_generated
+ 14. Source assignments for FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_7i01:auto_generated
  15. Parameter Settings for User Entity Instance: FontRom:FNT_H
  16. Parameter Settings for User Entity Instance: FontRom:FNT_E
  17. Parameter Settings for User Entity Instance: FontRom:FNT_L
- 18. Parameter Settings for Inferred Entity Instance: FontRom:FNT_H|altsyncram:Mux0_rtl_0
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "FontRom:FNT_L"
- 21. Port Connectivity Checks: "FontRom:FNT_E"
- 22. Port Connectivity Checks: "FontRom:FNT_H"
- 23. Port Connectivity Checks: "Controller:CNTRL"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+ 18. Parameter Settings for User Entity Instance: FontRom:FNT_O
+ 19. Parameter Settings for User Entity Instance: FontRom:FNT_W
+ 20. Parameter Settings for Inferred Entity Instance: FontRom:FNT_H|altsyncram:Mux0_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "FontRom:FNT_W"
+ 23. Port Connectivity Checks: "FontRom:FNT_O"
+ 24. Port Connectivity Checks: "FontRom:FNT_L"
+ 25. Port Connectivity Checks: "FontRom:FNT_E"
+ 26. Port Connectivity Checks: "FontRom:FNT_H"
+ 27. Port Connectivity Checks: "Controller:CNTRL"
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2012 Altera Corporation
+Copyright (C) 1991-2013 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -54,24 +58,24 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                       ;
-+------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 15 15:40:15 2013         ;
-; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; de0-video-card                                ;
-; Top-level Entity Name              ; Top                                           ;
-; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 169                                           ;
-;     Total combinational functions  ; 140                                           ;
-;     Dedicated logic registers      ; 87                                            ;
-; Total registers                    ; 87                                            ;
-; Total pins                         ; 7                                             ;
-; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 3,840                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                             ;
-; Total PLLs                         ; 0                                             ;
-+------------------------------------+-----------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 16 14:13:21 2013       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; de0-video-card                              ;
+; Top-level Entity Name              ; Top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 240                                         ;
+;     Total combinational functions  ; 232                                         ;
+;     Dedicated logic registers      ; 112                                         ;
+; Total registers                    ; 112                                         ;
+; Total pins                         ; 7                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 6,400                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -172,57 +176,58 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
-+----------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------+---------+
-; Top.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/Top.v                          ;         ;
-; Controller.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/Controller.v                   ;         ;
-; FontRom.v                        ; yes             ; User Verilog HDL File                                 ; C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/FontRom.v                      ;         ;
-; LineBuffer.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/LineBuffer.v                   ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altsyncram.tdf                               ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                        ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_mux.inc                                  ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc                               ;         ;
-; aglobal121.inc                   ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc                               ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                ;         ;
-; altrom.inc                       ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altrom.inc                                   ;         ;
-; altram.inc                       ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altram.inc                                   ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                                          ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
-; db/altsyncram_5i01.tdf           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/db/altsyncram_5i01.tdf         ;         ;
-; de0-video-card.Top0.rtl.mif      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/db/de0-video-card.Top0.rtl.mif ;         ;
-+----------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------+---------+
+; Top.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v                          ;         ;
+; Controller.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/fox/programming/eece444-video-card/de0-nano/Controller.v                   ;         ;
+; FontRom.v                        ; yes             ; User Verilog HDL File                                 ; C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v                      ;         ;
+; LineBuffer.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/fox/programming/eece444-video-card/de0-nano/LineBuffer.v                   ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                       ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
+; altrom.inc                       ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                           ;         ;
+; altram.inc                       ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                                          ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
+; db/altsyncram_7i01.tdf           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/fox/programming/eece444-video-card/de0-nano/db/altsyncram_7i01.tdf         ;         ;
+; de0-video-card.Top0.rtl.mif      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/fox/programming/eece444-video-card/de0-nano/db/de0-video-card.Top0.rtl.mif ;         ;
++----------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 169   ;
-;                                             ;       ;
-; Total combinational functions               ; 140   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 86    ;
-;     -- 3 input functions                    ; 13    ;
-;     -- <=2 input functions                  ; 41    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 110   ;
-;     -- arithmetic mode                      ; 30    ;
-;                                             ;       ;
-; Total registers                             ; 87    ;
-;     -- Dedicated logic registers            ; 87    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 7     ;
-; Total memory bits                           ; 3840  ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 117   ;
-; Total fan-out                               ; 991   ;
-; Average fan-out                             ; 3.66  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 240      ;
+;                                             ;          ;
+; Total combinational functions               ; 232      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 154      ;
+;     -- 3 input functions                    ; 23       ;
+;     -- <=2 input functions                  ; 55       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 202      ;
+;     -- arithmetic mode                      ; 30       ;
+;                                             ;          ;
+; Total registers                             ; 112      ;
+;     -- Dedicated logic registers            ; 112      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 7        ;
+; Total memory bits                           ; 6400     ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; clock_25 ;
+; Maximum fan-out                             ; 162      ;
+; Total fan-out                               ; 1572     ;
+; Average fan-out                             ; 3.85     ;
++---------------------------------------------+----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -230,13 +235,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
-; |Top                                      ; 140 (41)          ; 87 (11)      ; 3840        ; 0            ; 0       ; 0         ; 7    ; 0            ; |Top                                                                    ;              ;
+; |Top                                      ; 232 (98)          ; 112 (33)     ; 6400        ; 0            ; 0       ; 0         ; 7    ; 0            ; |Top                                                                    ;              ;
 ;    |Controller:CNTRL|                     ; 68 (68)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Controller:CNTRL                                                   ;              ;
-;    |FontRom:FNT_E|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_E                                                      ;              ;
-;    |FontRom:FNT_H|                        ; 6 (6)             ; 1 (1)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H                                                      ;              ;
-;       |altsyncram:Mux0_rtl_0|             ; 0 (0)             ; 0 (0)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0                                ;              ;
-;          |altsyncram_5i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_5i01:auto_generated ;              ;
-;    |LineBuffer:LINE_BUFFER|               ; 24 (24)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|LineBuffer:LINE_BUFFER                                             ;              ;
+;    |FontRom:FNT_E|                        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_E                                                      ;              ;
+;    |FontRom:FNT_H|                        ; 6 (6)             ; 1 (1)        ; 6400        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H                                                      ;              ;
+;       |altsyncram:Mux0_rtl_0|             ; 0 (0)             ; 0 (0)        ; 6400        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0                                ;              ;
+;          |altsyncram_7i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 6400        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_7i01:auto_generated ;              ;
+;    |FontRom:FNT_L|                        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_L                                                      ;              ;
+;    |FontRom:FNT_O|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_O                                                      ;              ;
+;    |FontRom:FNT_W|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|FontRom:FNT_W                                                      ;              ;
+;    |LineBuffer:LINE_BUFFER|               ; 54 (54)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|LineBuffer:LINE_BUFFER                                             ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -246,154 +254,293 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------+
 ; Name                                                                          ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                         ;
 +-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------+
-; FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_5i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 30           ; --           ; --           ; 3840 ; de0-video-card.Top0.rtl.mif ;
+; FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_7i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 50           ; --           ; --           ; 6400 ; de0-video-card.Top0.rtl.mif ;
 +-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                              ;
-+------------------------------------------------------+------------------------------------------+
-; Register name                                        ; Reason for Removal                       ;
-+------------------------------------------------------+------------------------------------------+
-; LineBuffer:LINE_BUFFER|DATA_OUT[40..639]             ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[0..23]                       ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[24..29]                      ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[30..38]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[39]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[40..48]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[49]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[50..58]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[59]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[60..68]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[69]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[70..78]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[79]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[80..88]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[89]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[90..98]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[99]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[100..108]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[109]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[110..118]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[119]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[120..128]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[129]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|char_font[130..159]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[0..23]                       ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[24..29]                      ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[30..38]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[39]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[40..48]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[49]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[50..58]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[59]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[60..68]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[69]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[70..73]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[74..79]                      ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[80..88]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[89]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[90..98]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[99]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[100..108]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[109]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[110..118]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[119]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[120..123]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[124..129]                    ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_E|char_font[130..159]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[0..20]                       ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[21]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[22..25]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[26]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[27..30]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[31]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[32..35]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[36]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[37..40]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[41]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[42..45]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[46]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[47..50]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[51]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[52..55]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[56]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[57..60]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[61]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[62..65]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[66]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[67..70]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[71..76]                      ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[77..80]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[81]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[82..85]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[86]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[87..90]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[91]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[92..95]                      ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[96]                          ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[97..100]                     ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[101]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[102..105]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[106]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[107..110]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[111]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[112..115]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[116]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[117..120]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[121]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[122..125]                    ; Stuck at GND due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[126]                         ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_H|char_font[127..159]                    ; Stuck at GND due to stuck port data_in   ;
-; string_buff[1,4,5,7,9,13,15,17,20,21,23,25,28,29,31] ; Merged with string_buff[12]              ;
-; string_buff[2]                                       ; Merged with string_buff[27]              ;
-; string_buff[3]                                       ; Merged with string_buff[10]              ;
-; string_buff[6,22,30]                                 ; Merged with string_buff[14]              ;
-; string_buff[18]                                      ; Merged with string_buff[11]              ;
-; string_buff[26]                                      ; Merged with string_buff[19]              ;
-; FontRom:FNT_L|DATA_OUT[1]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[2]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[3]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[4]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[5]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[6]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[7]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[8]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_L|DATA_OUT[9]~en                         ; Merged with FontRom:FNT_L|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[1]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[2]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[3]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[4]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[5]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[6]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[7]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[8]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_H|DATA_OUT[9]~en                         ; Merged with FontRom:FNT_H|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[1]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[2]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[3]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[4]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[5]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[6]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[7]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[8]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; FontRom:FNT_E|DATA_OUT[9]~en                         ; Merged with FontRom:FNT_E|DATA_OUT[0]~en ;
-; string_buff[12]                                      ; Stuck at GND due to stuck port data_in   ;
-; string_buff[14]                                      ; Stuck at VCC due to stuck port data_in   ;
-; FontRom:FNT_L|DATA_OUT[0]~en                         ; Lost fanout                              ;
-; Controller:CNTRL|ROW_NUM[4..9]                       ; Lost fanout                              ;
-; Total Number of Removed Registers = 1138             ;                                          ;
-+------------------------------------------------------+------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------+--------------------------------------------------+
+; Register name                                                                                         ; Reason for Removal                               ;
++-------------------------------------------------------------------------------------------------------+--------------------------------------------------+
+; LineBuffer:LINE_BUFFER|DATA_OUT[136..639]                                                             ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[0..19]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[20]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[21..24]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[25]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[26..29]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[30]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[31..34]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[35]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[36..39]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[40,41]                                                                        ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[42,43]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[44,45]                                                                        ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[46..48]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[49]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[50,51]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[52]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[53]                                                                           ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[54]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[55]                                                                           ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[56]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[57,58]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[59]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[60,61]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[62]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[63]                                                                           ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[64]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[65]                                                                           ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[66]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[67,68]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[69]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[70,71]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[72,73]                                                                        ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[74,75]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[76]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[77,78]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[79]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[80..85]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[86]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[87,88]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[89]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[90..95]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[96]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[97,98]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[99]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[100..105]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[106]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[107,108]                                                                      ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[109]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[110..115]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[116]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[117,118]                                                                      ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[119]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[120..125]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[126]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_W|char_font[127..159]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[0..19]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[20..25]                                                                       ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[26..29]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[30]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[31..34]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[35]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[36..39]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[40]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[41..44]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[45]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[46..49]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[50]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[51..54]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[55]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[56..59]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[60]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[61..64]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[65]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[66..69]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[70]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[71..74]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[75]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[76..79]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[80]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[81..84]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[85]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[86..89]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[90]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[91..94]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[95]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[96..99]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[100]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[101..104]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[105]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[106..109]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[110]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[111..114]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[115]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[116..119]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[120..125]                                                                     ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_O|char_font[126..159]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[0..19]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[20..25]                                                                       ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[26..34]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[35]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[36..44]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[45]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[46..54]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[55]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[56..64]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[65]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[66..74]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[75]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[76..84]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[85]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[86..94]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[95]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[96..104]                                                                      ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[105]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[106..114]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[115]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[116..124]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[125]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_L|char_font[126..159]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[0..19]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[20..25]                                                                       ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[26..34]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[35]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[36..44]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[45]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[46..54]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[55]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[56..64]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[65]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[66..69]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[70..75]                                                                       ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[76..84]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[85]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[86..94]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[95]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[96..104]                                                                      ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[105]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[106..114]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[115]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[116..119]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[120..125]                                                                     ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_E|char_font[126..159]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[0..20]                                                                        ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[21]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[22..25]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[26]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[27..30]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[31]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[32..35]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[36]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[37..40]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[41]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[42..45]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[46]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[47..50]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[51]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[52..55]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[56]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[57..60]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[61]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[62..65]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[66]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[67..70]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[71..76]                                                                       ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[77..80]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[81]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[82..85]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[86]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[87..90]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[91]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[92..95]                                                                       ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[96]                                                                           ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[97..100]                                                                      ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[101]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[102..105]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[106]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[107..110]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[111]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[112..115]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[116]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[117..120]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[121]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[122..125]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[126]                                                                          ; Stuck at VCC due to stuck port data_in           ;
+; FontRom:FNT_H|char_font[127..159]                                                                     ; Stuck at GND due to stuck port data_in           ;
+; string_buff[5,7,15,21,23,29,31,37,39,45,47]                                                           ; Merged with string_buff[13]                      ;
+; string_buff[6,22,30,38,46]                                                                            ; Merged with string_buff[14]                      ;
+; FontRom:FNT_W|DATA_OUT[1]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[2]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[3]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[4]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[5]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[6]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[7]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[8]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_W|DATA_OUT[9]~en                                                                          ; Merged with FontRom:FNT_W|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[1]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[2]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[3]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[4]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[5]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[6]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[7]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[8]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_L|DATA_OUT[9]~en                                                                          ; Merged with FontRom:FNT_L|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[1]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[2]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[3]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[4]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[5]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[6]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[7]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[8]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_H|DATA_OUT[9]~en                                                                          ; Merged with FontRom:FNT_H|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[1]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[2]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[3]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[4]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[5]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[6]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[7]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[8]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_O|DATA_OUT[9]~en                                                                          ; Merged with FontRom:FNT_O|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[1]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[2]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[3]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[4]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[5]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[6]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[7]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[8]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; FontRom:FNT_E|DATA_OUT[9]~en                                                                          ; Merged with FontRom:FNT_E|DATA_OUT[0]~en         ;
+; string_buff[13]                                                                                       ; Stuck at GND due to stuck port data_in           ;
+; string_buff[14]                                                                                       ; Stuck at VCC due to stuck port data_in           ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[80,81,86..89,94..97,102..105,110,111,120,121,126,127,130,131,134,135] ; Stuck at GND due to stuck port data_in           ;
+; char_num[2]                                                                                           ; Stuck at GND due to stuck port data_in           ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[40..57,62..79,82..85,98..101,112..119,128,129,132,133]                ; Stuck at GND due to stuck port data_in           ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[58,90,122]                                                            ; Merged with LineBuffer:LINE_BUFFER|DATA_OUT[106] ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[59,91,123]                                                            ; Merged with LineBuffer:LINE_BUFFER|DATA_OUT[107] ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[60,92,124]                                                            ; Merged with LineBuffer:LINE_BUFFER|DATA_OUT[108] ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[61,93,125]                                                            ; Merged with LineBuffer:LINE_BUFFER|DATA_OUT[109] ;
+; Controller:CNTRL|ROW_NUM[4..9]                                                                        ; Lost fanout                                      ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[106..109]                                                             ; Stuck at GND due to stuck port data_in           ;
+; Total Number of Removed Registers = 1470                                                              ;                                                  ;
++-------------------------------------------------------------------------------------------------------+--------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                               ;
-+--------------------------------------+---------------------------+----------------------------------------+
-; Register name                        ; Reason for Removal        ; Registers Removed due to This Register ;
-+--------------------------------------+---------------------------+----------------------------------------+
-; LineBuffer:LINE_BUFFER|DATA_OUT[639] ; Stuck at GND              ; LineBuffer:LINE_BUFFER|DATA_OUT[590]   ;
-;                                      ; due to stuck port data_in ;                                        ;
-+--------------------------------------+---------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++--------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                        ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++--------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; char_num[2]                          ; Stuck at GND              ; LineBuffer:LINE_BUFFER|DATA_OUT[48], LineBuffer:LINE_BUFFER|DATA_OUT[49],   ;
+;                                      ; due to stuck port data_in ; LineBuffer:LINE_BUFFER|DATA_OUT[54], LineBuffer:LINE_BUFFER|DATA_OUT[55],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[56], LineBuffer:LINE_BUFFER|DATA_OUT[57],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[62], LineBuffer:LINE_BUFFER|DATA_OUT[63],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[72], LineBuffer:LINE_BUFFER|DATA_OUT[73],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[78], LineBuffer:LINE_BUFFER|DATA_OUT[79],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[40], LineBuffer:LINE_BUFFER|DATA_OUT[41],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[46], LineBuffer:LINE_BUFFER|DATA_OUT[47],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[64], LineBuffer:LINE_BUFFER|DATA_OUT[65],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[70], LineBuffer:LINE_BUFFER|DATA_OUT[71],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[112], LineBuffer:LINE_BUFFER|DATA_OUT[113], ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[118], LineBuffer:LINE_BUFFER|DATA_OUT[119], ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[42], LineBuffer:LINE_BUFFER|DATA_OUT[43],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[44], LineBuffer:LINE_BUFFER|DATA_OUT[45],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[50], LineBuffer:LINE_BUFFER|DATA_OUT[51],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[52], LineBuffer:LINE_BUFFER|DATA_OUT[53],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[66], LineBuffer:LINE_BUFFER|DATA_OUT[67],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[68], LineBuffer:LINE_BUFFER|DATA_OUT[69],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[74], LineBuffer:LINE_BUFFER|DATA_OUT[75],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[76], LineBuffer:LINE_BUFFER|DATA_OUT[77],   ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[106], LineBuffer:LINE_BUFFER|DATA_OUT[107], ;
+;                                      ;                           ; LineBuffer:LINE_BUFFER|DATA_OUT[108], LineBuffer:LINE_BUFFER|DATA_OUT[109]  ;
+; LineBuffer:LINE_BUFFER|DATA_OUT[639] ; Stuck at GND              ; LineBuffer:LINE_BUFFER|DATA_OUT[562]                                        ;
+;                                      ; due to stuck port data_in ;                                                                             ;
++--------------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -401,12 +548,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 87    ;
-; Number of registers using Synchronous Clear  ; 26    ;
+; Total registers                              ; 112   ;
+; Number of registers using Synchronous Clear  ; 43    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 49    ;
+; Number of registers using Clock Enable       ; 53    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -446,28 +593,108 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FontRom:FNT_L|DATA_OUT[3]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
 ; FontRom:FNT_L|DATA_OUT[2]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
 ; FontRom:FNT_L|DATA_OUT[1]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[0]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[9]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[8]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[7]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[6]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[5]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[4]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[3]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[2]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_O|DATA_OUT[1]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[0]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[9]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[8]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[7]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[6]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[5]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[4]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[3]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[2]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
+; FontRom:FNT_W|DATA_OUT[1]~reg0 ; FontRom:FNT_H|Mux0_rtl_0 ; ROM  ;
 +--------------------------------+--------------------------+------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|v_counter[9]       ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|ROW_NUM[1]         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[11] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[26] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[31] ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[9]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[19] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[29] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Top|font_bus[9]                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|v_counter[5]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Top|Controller:CNTRL|ROW_NUM[2]          ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[128] ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[7]   ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[132] ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[3]   ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[15]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[31]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[46]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[62]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[78]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[94]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[111] ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[126] ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[8]   ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[24]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[40]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[57]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[73]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[89]  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[104] ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[120] ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[130] ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[4]   ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[10]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[18]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[27]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[35]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[42]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[50]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[59]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[66]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[74]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[83]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[90]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[98]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[106] ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[114] ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[122] ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[22]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[38]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[54]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[70]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[86]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[102] ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[119] ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[13]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[20]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[28]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[36]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[44]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[53]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[61]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[68]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[77]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[84]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[93]  ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[100] ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[108] ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[116] ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[124] ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[16]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[33]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[49]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[64]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[80]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[96]  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Top|LineBuffer:LINE_BUFFER|DATA_OUT[113] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Top|font_bus[9]                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_5i01:auto_generated ;
+; Source assignments for FontRom:FNT_H|altsyncram:Mux0_rtl_0|altsyncram_7i01:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -492,7 +719,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value                                                                                                                                                            ; Type            ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 ; char           ; 01000101                                                                                                                                                         ; Unsigned Binary ;
-; font_value     ; 0000000000000000000000000000001111110000100000000010000000001000000000100000000011111100001000000000100000000010000000001000000000111111000000000000000000000000 ; Unsigned Binary ;
+; font_value     ; 0000000000000000000000000000000000111111000010000000001000000000100000000010000000001111110000100000000010000000001000000000100000000011111100000000000000000000 ; Unsigned Binary ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -503,7 +730,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value                                                                                                                                                            ; Type            ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 ; char           ; 01001100                                                                                                                                                         ; Unsigned Binary ;
-; font_value     ; 0000000000000000000000000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000111111000000000000000000000000 ; Unsigned Binary ;
+; font_value     ; 0000000000000000000000000000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000011111100000000000000000000 ; Unsigned Binary ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FontRom:FNT_O                                                                                                                                          ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Parameter Name ; Value                                                                                                                                                            ; Type            ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; char           ; 01001111                                                                                                                                                         ; Unsigned Binary ;
+; font_value     ; 0000000000000000000000000000000000111111000010000100001000010000100001000010000100001000010000100001000010000100001000010000100001000011111100000000000000000000 ; Unsigned Binary ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FontRom:FNT_W                                                                                                                                          ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Parameter Name ; Value                                                                                                                                                            ; Type            ;
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; char           ; 01010111                                                                                                                                                         ; Unsigned Binary ;
+; font_value     ; 0000000000000000000000000000000001000000100100000010010000001001000000100100000010010011001001010100100101010010001100110000100001000010000100000000000000000000 ; Unsigned Binary ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -520,7 +769,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                         ; IGNORE_CASCADE    ;
 ; WIDTH_BYTEENA                      ; 1                           ; Untyped           ;
 ; OPERATION_MODE                     ; ROM                         ; Untyped           ;
-; WIDTH_A                            ; 30                          ; Untyped           ;
+; WIDTH_A                            ; 50                          ; Untyped           ;
 ; WIDTHAD_A                          ; 7                           ; Untyped           ;
 ; NUMWORDS_A                         ; 128                         ; Untyped           ;
 ; OUTDATA_REG_A                      ; UNREGISTERED                ; Untyped           ;
@@ -564,7 +813,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                       ; Untyped           ;
 ; WIDTH_ECCSTATUS                    ; 3                           ; Untyped           ;
 ; DEVICE_FAMILY                      ; Cyclone IV E                ; Untyped           ;
-; CBXI_PARAMETER                     ; altsyncram_5i01             ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_7i01             ; Untyped           ;
 +------------------------------------+-----------------------------+-------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -577,7 +826,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances                ; 1                                   ;
 ; Entity Instance                           ; FontRom:FNT_H|altsyncram:Mux0_rtl_0 ;
 ;     -- OPERATION_MODE                     ; ROM                                 ;
-;     -- WIDTH_A                            ; 30                                  ;
+;     -- WIDTH_A                            ; 50                                  ;
 ;     -- NUMWORDS_A                         ; 128                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                        ;
 ;     -- WIDTH_B                            ; 1                                   ;
@@ -587,6 +836,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                           ;
 +-------------------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FontRom:FNT_W"                                                                                                                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ROW_NUM ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FontRom:FNT_O"                                                                                                                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ROW_NUM ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -632,7 +899,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -640,9 +907,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
-    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 15 15:39:53 2013
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Thu May 16 14:13:18 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0-video-card -c de0-video-card
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
@@ -658,6 +925,8 @@ Info (12128): Elaborating entity "Controller" for hierarchy "Controller:CNTRL"
 Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_H"
 Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_E"
 Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_L"
+Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_O"
+Info (12128): Elaborating entity "FontRom" for hierarchy "FontRom:FNT_W"
 Info (12128): Elaborating entity "LineBuffer" for hierarchy "LineBuffer:LINE_BUFFER"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "font_bus[9]" into a selector
@@ -673,7 +942,7 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276031): Inferred altsyncram megafunction from the following design logic: "FontRom:FNT_H|Mux0_rtl_0"
         Info (286033): Parameter OPERATION_MODE set to ROM
-        Info (286033): Parameter WIDTH_A set to 30
+        Info (286033): Parameter WIDTH_A set to 50
         Info (286033): Parameter WIDTHAD_A set to 7
         Info (286033): Parameter NUMWORDS_A set to 128
         Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
@@ -682,35 +951,35 @@ Info (19000): Inferred 1 megafunctions from design logic
 Info (12130): Elaborated megafunction instantiation "FontRom:FNT_H|altsyncram:Mux0_rtl_0"
 Info (12133): Instantiated megafunction "FontRom:FNT_H|altsyncram:Mux0_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
-    Info (12134): Parameter "WIDTH_A" = "30"
+    Info (12134): Parameter "WIDTH_A" = "50"
     Info (12134): Parameter "WIDTHAD_A" = "7"
     Info (12134): Parameter "NUMWORDS_A" = "128"
     Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
     Info (12134): Parameter "INIT_FILE" = "de0-video-card.Top0.rtl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5i01.tdf
-    Info (12023): Found entity 1: altsyncram_5i01
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7i01.tdf
+    Info (12023): Found entity 1: altsyncram_7i01
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/output_files/de0-video-card.map.smsg
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/fox/programming/eece444-video-card/de0-nano/output_files/de0-video-card.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 216 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 309 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 179 logic cells
-    Info (21064): Implemented 30 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 371 megabytes
-    Info: Processing ended: Wed May 15 15:40:16 2013
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 252 logic cells
+    Info (21064): Implemented 50 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 447 megabytes
+    Info: Processing ended: Thu May 16 14:13:21 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/OctalByte/Documents/GitHub/eece444-video-card/de0-nano/output_files/de0-video-card.map.smsg.
+The suppressed messages can be found in C:/Users/fox/programming/eece444-video-card/de0-nano/output_files/de0-video-card.map.smsg.
 
 

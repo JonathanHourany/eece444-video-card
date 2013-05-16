@@ -23,7 +23,7 @@
    
    always @(negedge CLK) begin
       if (!RESET) begin
-         char_font <= font_value;
+         char_font = font_value;
       end
       else if (CHAR_IN == char) begin
          DATA_OUT = char_font[10*ROW_NUM+:10];

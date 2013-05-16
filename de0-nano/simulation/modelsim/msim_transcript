@@ -48,82 +48,44 @@ vsim work.Top
 # 
 # ** Warning: (vsim-3722) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(37): [TFMPC] - Missing connection for port 'V_STATUS'.
 # 
-# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(43): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'CHAR_IN'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
-# 
-#         Region: /Top/FNT_H
 # ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(43): [PCDPC] - Port size (4 or 4) does not match connection size (10) for port 'ROW_NUM'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
 # 
 #         Region: /Top/FNT_H
-# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(46): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'CHAR_IN'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
+# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(49): [PCDPC] - Port size (4 or 4) does not match connection size (10) for port 'ROW_NUM'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
 # 
 #         Region: /Top/FNT_E
-# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(46): [PCDPC] - Port size (4 or 4) does not match connection size (10) for port 'ROW_NUM'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
+# ** Warning: (vsim-3015) C:/Users/fox/programming/eece444-video-card/de0-nano/Top.v(55): [PCDPC] - Port size (4 or 4) does not match connection size (10) for port 'ROW_NUM'. The port definition is at: C:/Users/fox/programming/eece444-video-card/de0-nano/FontRom.v(12).
 # 
-#         Region: /Top/FNT_E
-add wave sim:/Top/*
+#         Region: /Top/FNT_L
+add wave -position end  sim:/Top/RESET
+add wave -position end  sim:/Top/H_SYNC
+add wave -position end  sim:/Top/V_SYNC
+add wave -position end  sim:/Top/RED
+add wave -position end  sim:/Top/BLUE
+add wave -position end  sim:/Top/GREEN
+add wave -position end  sim:/Top/clock_25
+add wave -position end  sim:/Top/string_buff
+add wave -position end  sim:/Top/char_num
+add wave -position end  sim:/Top/line_buffer
+add wave -position end  sim:/Top/font_bus
+add wave -position end  sim:/Top/pixel_cntr
+add wave -position end  sim:/Top/row_num
+add wave -position end  sim:/Top/FNT_H/CHAR_IN
+add wave -position end  sim:/Top/FNT_H/DATA_OUT
+add wave -position end  sim:/Top/FNT_H/char_font
 add wave -position end  sim:/Top/FNT_E/CHAR_IN
 add wave -position end  sim:/Top/FNT_E/DATA_OUT
 add wave -position end  sim:/Top/FNT_E/char_font
-add wave -position end  sim:/Top/FNT_H/CHAR_IN
-add wave -position end  sim:/Top/FNT_H/ROW_NUM
-add wave -position end  sim:/Top/FNT_H/DATA_OUT
-add wave -position end  sim:/Top/FNT_H/CHAR_IN
+add wave -position end  sim:/Top/FNT_L/CHAR_IN
+add wave -position end  sim:/Top/FNT_L/DATA_OUT
+add wave -position end  sim:/Top/FNT_L/char_font
+add wave -position end  sim:/Top/LINE_BUFFER/CHAR_NUM
+add wave -position end  sim:/Top/LINE_BUFFER/DATA_IN
+add wave -position end  sim:/Top/LINE_BUFFER/DATA_OUT
 force -freeze sim:/Top/clock_25 1 0, 0 {20 ps} -r 40
-noforce sim:/Top/RESET
-force -drive sim:/Top/RESET HiZ 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 force -drive sim:/Top/RESET 0 0
 run
-force -drive sim:/Top/RESET St1 0
+force -drive sim:/Top/RESET 1 0
 run
 run
 run
@@ -183,9 +145,87 @@ run
 run
 run
 run
-add wave sim:/Top/LINE_BUFFER/*
 run
 run
-add wave -position 20  sim:/Top/FNT_H/char_font
 run
-# WARNING: No extended dataflow license exists
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
