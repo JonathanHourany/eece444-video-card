@@ -32,16 +32,5 @@
          DATA_OUT = 10'bZZ;
       end
    end
-   
-//   always @(negedge CLK) begin
-//      if (CHAR_IN == 2'h48) begin
-//         DATA_OUT = char_font[10*ROW_NUM+:10];
-//      end
-//      else if (!RESET) begin
-//         char_font <= `font_value;
-//      end
-//      else begin
-//         DATA_OUT = 8'bZZ;
-//      end
-//   end
+
 endmodule

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Report>
 <ReportView version="2.0">
-    <Implement name="eece444_video_card">
-        <ToolReport id="toolhle_genhierarchy" path="C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece444_video_card/hdla_gen_hierarchy.html" status="1"/>
+    <Implement name="eece343_alu">
+        <ToolReport id="toolhle_genhierarchy" path="C:/Users/OctalByte/Documents/GitHub/eece444-video-card/eece343_alu/hdla_gen_hierarchy.html" status="1"/>
         <ToolReport id="toolhle_runbkm" path="" status="0"/>
         <ToolReport id="toolpio" path="" status="0"/>
         <ToolReport id="toolsso" path="" status="0"/>
